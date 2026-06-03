@@ -1236,6 +1236,8 @@ function Projects() {
   const [ref, v] = useInView();
   const [tab, setTab] = useState("featured");
   const [cat, setCat] = useState("All");
+  const [expanded, setExpanded] = useState(false);
+  const LIMIT = 3;
 
   const categories = ["All", "Website", "E-Commerce", "Real Estate", "Branding", "Media"];
   const freelance = PROJECTS.filter((p) => !p.featured && !p.cased);
@@ -1244,6 +1246,7 @@ function Projects() {
   const filtered = tab === "featured"
     ? featured
     : cat === "All" ? freelance : freelance.filter((p) => p.category === cat);
+  const shown = expanded ? filtered : filtered.slice(0, LIMIT);
 
   return (
     <section id="projects" ref={ref} style={sec}>
@@ -1260,7 +1263,7 @@ function Projects() {
         <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.4rem", fontWeight: 700, color: C.textPrimary, margin: 0 }}>More <Ac>Work</Ac></h3>
         <div style={{ display: "flex", gap: ".3rem" }}>
           {["featured", "freelance"].map((t) => (
-            <button key={t} onClick={() => { setTab(t); setCat("All"); }} aria-pressed={tab === t}
+            <button key={t} onClick={() => { setTab(t); setCat("All"); setExpanded(false); }} aria-pressed={tab === t}
               style={{ padding: ".45rem 1.2rem", background: tab === t ? C.cyan : "transparent", border: `1px solid ${tab === t ? C.cyan : C.border}`, color: tab === t ? C.bg : C.textMuted, fontFamily: "'DM Mono',monospace", fontSize: ".68rem", letterSpacing: ".12em", textTransform: "uppercase", cursor: "pointer", borderRadius: 2, transition: "all .2s", fontWeight: tab === t ? 700 : 400 }}>
               {t === "featured" ? "Company" : "Freelance"}
             </button>
@@ -1279,7 +1282,7 @@ function Projects() {
       {tab === "freelance" && (
         <div style={{ display: "flex", gap: ".4rem", flexWrap: "wrap", marginTop: "1.5rem" }}>
           {categories.map((c) => (
-            <button key={c} onClick={() => setCat(c)} aria-pressed={cat === c}
+            <button key={c} onClick={() => { setCat(c); setExpanded(false); }} aria-pressed={cat === c}
               style={{ padding: ".32rem .85rem", background: cat === c ? `${C.cyan}22` : "transparent", border: `1px solid ${cat === c ? C.cyan : C.border}`, color: cat === c ? C.cyan : C.textMuted, fontFamily: "'DM Mono',monospace", fontSize: ".66rem", letterSpacing: ".1em", textTransform: "uppercase", cursor: "pointer", borderRadius: 2, transition: "all .2s" }}>
               {c}
             </button>
@@ -1296,8 +1299,19 @@ function Projects() {
       )}
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(290px,1fr))", gap: "1.2rem", marginTop: "1.5rem" }}>
-        {filtered.map((p, i) => <PCard key={p.title} p={p} i={i} v={v} />)}
+        {shown.map((p, i) => <PCard key={p.title} p={p} i={i} v={v} />)}
       </div>
+
+      {filtered.length > LIMIT && (
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+          <button onClick={() => setExpanded((e) => !e)}
+            style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", padding: ".7rem 1.6rem", background: "transparent", border: `1px solid ${C.border}`, color: C.textBody, fontFamily: "'DM Mono',monospace", fontSize: ".7rem", letterSpacing: ".12em", textTransform: "uppercase", borderRadius: 2, cursor: "pointer", transition: "all .2s" }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.cyan; e.currentTarget.style.color = C.cyan; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textBody; }}>
+            {expanded ? "Show less ↑" : `Show all ${filtered.length} ↓`}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
