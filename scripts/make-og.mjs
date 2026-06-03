@@ -52,7 +52,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <div class="role">6+ years &middot; Austria &middot; Switzerland &middot; Germany &middot; Kosovo</div>
     <div class="stats">
       <div class="stat"><div class="n">6+</div><div class="l">Years</div></div>
-      <div class="stat"><div class="n">20+</div><div class="l">Apps Shipped</div></div>
+      <div class="stat"><div class="n">20+</div><div class="l">Apps Delivered</div></div>
       <div class="stat"><div class="n">4</div><div class="l">Countries</div></div>
       <div class="stat"><div class="n">80+</div><div class="l">Devs Trained</div></div>
     </div>

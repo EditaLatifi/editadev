@@ -49,7 +49,7 @@ const CASE_STUDIES = [
     url: "https://crm-frontend-xi-three.vercel.app/login",
     context:
       "A German-speaking business had outgrown its mix of spreadsheets and off-the-shelf tools. They wanted one CRM built around how they actually work, and they wanted to own it outright.",
-    role: "Sole engineer. I scoped it, built it, and shipped it.",
+    role: "Sole engineer. I scoped it, built it, and delivered it.",
     challenge:
       "One person covering the whole thing, from data model to UI, while keeping it simple enough to live in daily without a manual. And it all had to work in German.",
     did: [
@@ -111,7 +111,7 @@ const CASE_STUDIES = [
     img: null,
     visual: "collab",
     context:
-      "I don't work in a corner. Every project runs through designers, product owners, QA and stakeholders, and the work is better for it.",
+      "I don't build in isolation. Every project runs through designers, product owners, QA and stakeholders, and the work is better for it.",
     role: "Tech lead who keeps the team moving and the code honest.",
     challenge:
       "Keeping a team aligned across different functions and locations while holding a high bar on quality.",
@@ -195,7 +195,7 @@ const downloadCV = () => {
 
 const STATS = [
   { n: 6, suffix: "+", label: "Years Experience" },
-  { n: 20, suffix: "+", label: "Apps Shipped" },
+  { n: 20, suffix: "+", label: "Apps Delivered" },
   { n: 4, suffix: "", label: "Countries" },
   { n: 80, suffix: "+", label: "Developers Trained" },
 ];
@@ -553,7 +553,7 @@ function Hero({ ready }) {
 
       {/* Statement */}
       <p style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(16px)", transition: "all .8s ease .45s", fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "clamp(1.1rem,2.5vw,1.55rem)", color: C.textPrimary, letterSpacing: "-.01em", margin: "0 0 3rem", lineHeight: 1.4 }}>
-        I build it. I lead it. I ship it.<br />
+        I build it. I lead it. I deliver it.<br />
         <span style={{ fontFamily: "'DM Mono',monospace", fontWeight: 400, fontSize: "clamp(.75rem,1.6vw,.9rem)", color: C.textMuted, letterSpacing: ".04em" }}>
           I take on a few teams at a time, and I own what I build for them.
         </span>
@@ -742,7 +742,7 @@ const nodeStyle = (accent) => ({
 });
 
 function AIVisual() {
-  const steps = [{ t: "Trigger", a: C.border }, { t: "AI", a: C.cyan }, { t: "n8n", a: C.green }, { t: "Ship", a: C.cyan }];
+  const steps = [{ t: "Trigger", a: C.border }, { t: "AI", a: C.cyan }, { t: "n8n", a: C.green }, { t: "Deliver", a: C.cyan }];
   return (
     <div style={visualWrap}>
       <div style={{ display: "flex", alignItems: "center", gap: ".55rem", flexWrap: "wrap", justifyContent: "center" }}>
@@ -766,7 +766,7 @@ function CollabVisual() {
         {roles.map((r) => <div key={r} style={nodeStyle(C.cyanDim)}>{r}</div>)}
       </div>
       <span aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.4rem", color: C.cyan }}>↓</span>
-      <div style={{ ...nodeStyle(C.green), fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: 0, color: C.green }}>Shipped — together</div>
+      <div style={{ ...nodeStyle(C.green), fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: 0, color: C.green }}>Delivered, together</div>
     </div>
   );
 }
@@ -871,7 +871,7 @@ function Projects() {
   return (
     <section id="projects" ref={ref} style={sec}>
       <Label n="04" t="Projects" />
-      <H2>Things I've <Ac>Shipped</Ac></H2>
+      <H2>Things I've <Ac>Delivered</Ac></H2>
 
       {/* Featured case studies */}
       <div style={{ marginTop: "3rem" }}>
