@@ -158,7 +158,7 @@ const PROJECTS = [
 const ABOUT_PARAS = [
   "I'm Edita. A full-stack engineer and tech lead based in Pristina, Kosovo, working with teams across Austria, Switzerland, and Germany.",
   "I work closely with designers, product owners, QA and stakeholders. I run code reviews and mentor the developers around me. Most of it happens remotely, but I get on a plane when it helps. Workshops, planning, delivery, on-site with the team.",
-  "Mostly, I just work hard and honestly. I take a project from the first line of code to the day it goes live, and I own it the whole way. I care where I put that work, so I'm picky about the teams I say yes to.",
+  "I work hard, and I do it honestly. I take a project from the first line of code to the day it goes live, and I own it the whole way. I care where I put that work, so I'm picky about the teams I say yes to.",
 ];
 
 const BRINGS = [
