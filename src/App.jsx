@@ -1087,7 +1087,7 @@ function Faq() {
 
 /* ─── CASE STUDIES ──────────────────────────────────────────────────────── */
 const visualWrap = {
-  position: "relative", height: "100%", minHeight: 260, display: "flex",
+  position: "relative", height: "100%", minHeight: 200, display: "flex",
   flexDirection: "column", alignItems: "center", justifyContent: "center",
   gap: "1.4rem", padding: "2rem", textAlign: "center",
   background: `linear-gradient(135deg, ${C.cyan}0c, ${C.green}08)`,
@@ -1178,14 +1178,14 @@ function CaseStudy({ cs, i }) {
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.cyan},${C.green})`, zIndex: 2 }} />
       <div className="case-grid" style={{ display: "grid", gridTemplateColumns: imageLeft ? "minmax(0,1.05fr) minmax(0,1fr)" : "minmax(0,1fr) minmax(0,1.05fr)", alignItems: "stretch" }}>
         {/* Visual */}
-        <div style={{ order: imageLeft ? 0 : 1, minHeight: 260, position: "relative", overflow: "hidden" }}>
+        <div style={{ order: imageLeft ? 0 : 1, minHeight: isMobile ? 170 : 260, position: "relative", overflow: "hidden" }}>
           <CaseVisual cs={cs} />
         </div>
 
         {/* Story */}
-        <div style={{ order: imageLeft ? 1 : 0, padding: "2rem 2.2rem", borderLeft: imageLeft ? `1px solid ${C.border}` : "none", borderRight: imageLeft ? "none" : `1px solid ${C.border}` }}>
+        <div style={{ order: imageLeft ? 1 : 0, padding: isMobile ? "1.4rem 1.4rem" : "2rem 2.2rem", borderLeft: imageLeft ? `1px solid ${C.border}` : "none", borderRight: imageLeft ? "none" : `1px solid ${C.border}` }}>
           <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.cyan, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".7rem" }}>Featured Case Study · {cs.category}</div>
-          <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.45rem", fontWeight: 800, color: C.textPrimary, margin: "0 0 .25rem", letterSpacing: "-.01em" }}>{cs.title}</h3>
+          <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: isMobile ? "1.2rem" : "1.45rem", fontWeight: 800, color: C.textPrimary, margin: "0 0 .25rem", letterSpacing: "-.01em" }}>{cs.title}</h3>
           <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.textMuted, marginBottom: "1.1rem" }}>{cs.client}</div>
           {(!isMobile || open) && (
             <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.7, margin: "0 0 1.2rem" }}>{cs.context}</p>
