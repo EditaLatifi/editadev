@@ -544,7 +544,7 @@ function Hero({ ready }) {
       {/* Role */}
       <div style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(16px)", transition: "all .8s ease .3s", marginBottom: "1.6rem" }}>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: "clamp(.8rem,1.6vw,1rem)", color: C.textBody, letterSpacing: ".08em", lineHeight: 1.9 }}>
-          Full Stack Engineer &amp; Tech Lead
+          Full Stack Engineer &amp; Tech Team Lead
         </div>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: "clamp(.72rem,1.3vw,.88rem)", color: C.textMuted, letterSpacing: ".06em" }}>
           6+ years &nbsp;·&nbsp; Austria · Switzerland · Germany · Kosovo
@@ -1203,7 +1203,7 @@ function Footer() {
           Full Stack Engineer · Full Stack Entwicklerin · Développeuse Full Stack
         </div>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, letterSpacing: ".06em", marginTop: 4 }}>
-          Tech Lead · Frontend &amp; Backend · React · Node · TypeScript · © 2026 Edita Latifi
+          Tech Team Lead · Frontend &amp; Backend · React · Node · TypeScript · © 2026 Edita Latifi
         </div>
       </div>
     </footer>

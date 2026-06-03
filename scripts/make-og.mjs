@@ -47,7 +47,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="grid"></div>
   ${photo ? `<img class="photo" src="${photo}" /><div class="photo-fade"></div>` : ""}
   <div class="content">
-    <div class="kicker">Full Stack Engineer &middot; Tech Lead</div>
+    <div class="kicker">Full Stack Engineer &middot; Tech Team Lead</div>
     <h1>EDITA<br><span class="stroke">LATIFI</span></h1>
     <div class="role">6+ years &middot; Austria &middot; Switzerland &middot; Germany &middot; Kosovo</div>
     <div class="stats">
