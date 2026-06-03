@@ -54,12 +54,17 @@ const CASE_STUDIES = [
       "One person covering the whole thing, from data model to UI, while keeping it simple enough to live in daily without a manual. And it all had to work in German.",
     did: [
       "Built the full stack: React on the front, a Nest.js API behind it, PostgreSQL underneath.",
-      "Modelled the customer lifecycle, from first lead through the pipeline, so the team works in one place instead of five.",
+      "Modelled the full workflow — clients through the pipeline, plus the freelancers the business contracts for different jobs — so the whole team works in one place instead of five.",
       "Set up role-based access so each person sees only what their job needs, nothing more.",
       "Added a reporting dashboard and a secure password-recovery flow, with the whole interface in German.",
     ],
     outcome:
-      "It's live, and the team uses it every day. They own the system now, instead of renting one that almost fits.",
+      "It's live, and a team of 12 runs on it every day — tracking around 40 clients plus the freelancers they contract for different jobs, all in one system they own instead of renting one that almost fits.",
+    metrics: [
+      { v: "12", l: "team members use it daily" },
+      { v: "~40", l: "clients managed" },
+      { v: "100%", l: "German-language UI" },
+    ],
     stack: ["React.js", "Nest.js", "PostgreSQL", "RBAC"],
   },
   {
@@ -80,7 +85,12 @@ const CASE_STUDIES = [
       "Built the notifications system that lets businesses reach their customers.",
     ],
     outcome:
-      "It's a dark-themed production app, live and in use, with each business running its own programme on it.",
+      "It's a dark-themed production app, live in active use — running at two MrBurger venues in Prague, where customers earn rewards and get push notifications, with each business isolated on its own tenant.",
+    metrics: [
+      { v: "2", l: "live MrBurger venues · Prague" },
+      { v: "1-tap", l: "Google sign-in" },
+      { v: "Push", l: "rewards + notifications" },
+    ],
     stack: ["Next.js", "Node.js", "PostgreSQL", "Google OAuth"],
   },
   {
@@ -129,15 +139,15 @@ const CASE_STUDIES = [
 
 const PROJECTS = [
   // ── Featured (company work) ──────────────────────────────────────────────
-  { title: "Enterprise E-Commerce Platform", client: "Confidential · Swiss Client", desc: "Large-scale e-commerce platform — custom CMS, product management, inventory, payment integration, and performance optimisation. Built to handle high traffic and scale.", stack: ["Next.js", "Node.js", "PostgreSQL", "Prismic"], featured: true, category: "E-Commerce", url: null, img: null },
-  { title: "Hospital Management System", client: "Confidential · Enterprise", desc: "Full-stack healthcare platform — patient management, appointment scheduling, medical records, and role-based access for clinical staff. Built to strict data privacy standards.", stack: ["Vue.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "Healthcare", url: null, img: null },
-  { title: "Translations Management Platform", client: "Confidential · Enterprise", desc: "End-to-end translations workflow SaaS — project management, translator assignments, review pipeline, and client delivery portal. Multi-language, multi-tenant.", stack: ["React.js", "Node.js", "PostgreSQL"], featured: true, category: "SaaS", url: null, img: null },
-  { title: "Gaming Platform", client: "Confidential · Enterprise", desc: "High-performance gaming web platform — real-time features, user management, leaderboards, and optimised API architecture built for concurrent load.", stack: ["Next.js", "Nest.js", "PostgreSQL", "Redis"], featured: true, category: "Gaming", url: null, img: null },
-  { title: "Hospitality Management Platform", client: "Confidential · Swiss Client", desc: "Full hospitality SaaS for Swiss market — end-to-end booking engine, room & property management, payment processing, guest portal, and staff workflow. Integrated with third-party payment providers and channel management.", stack: ["Next.js", "Nest.js", "PostgreSQL", "Docker", "Stripe"], featured: true, category: "Hospitality", url: null, img: null },
-  { title: "Architecture CRM", client: "Confidential · Swiss Client", desc: "Custom CRM built for architecture firms — project lifecycle management, client portal, tender tracking, document & drawing management, team collaboration, and billing integration.", stack: ["Vue.js", "Node.js", "PostgreSQL", "Docker"], featured: true, category: "CRM", url: null, img: null },
-  { title: "Legacy Stack Migration", client: "Confidential · Enterprise", desc: "Full modernisation of a large-scale legacy application — audited outdated codebase, planned and executed phased migration to modern stack, zero downtime delivery. Improved performance, maintainability, and developer experience significantly.", stack: ["Next.js", "TypeScript", "Node.js", "Docker", "PostgreSQL"], featured: true, category: "Migration", url: null, img: null },
-  { title: "CRM Replacement & Data Migration", client: "Confidential · Enterprise", desc: "Replaced an existing third-party CRM with a fully custom-built solution — migrated all client data, rebuilt workflows, and delivered a seamless cutover with no data loss. Team trained and handed over on schedule.", stack: ["React.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "Migration", url: null, img: null },
-  { title: "SaaS Analytics Dashboard", client: "Austrian Tech Company", desc: "Real-time analytics dashboard with role-based access, data visualisation, and optimised REST API architecture.", stack: ["Vue.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "SaaS", url: null, img: null },
+  { title: "Enterprise E-Commerce Platform", client: "Confidential · Swiss Client", desc: "A large e-commerce platform with a custom CMS, product and inventory management, and payment integration. Built to stay fast when the traffic spikes.", stack: ["Next.js", "Node.js", "PostgreSQL", "Prismic"], featured: true, category: "E-Commerce", url: null, img: null },
+  { title: "Hospital Management System", client: "Confidential · Enterprise", desc: "A healthcare platform for patient records, appointments, and scheduling, with role-based access for clinical staff and strict data-privacy rules throughout.", stack: ["Vue.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "Healthcare", url: null, img: null },
+  { title: "Translations Management Platform", client: "Confidential · Enterprise", desc: "A SaaS for running translation work end to end: projects, translator assignments, a review pipeline, and a client delivery portal. Multi-language and multi-tenant.", stack: ["React.js", "Node.js", "PostgreSQL"], featured: true, category: "SaaS", url: null, img: null },
+  { title: "Gaming Platform", client: "Confidential · Enterprise", desc: "A gaming web platform with real-time features, user accounts, and leaderboards, with an API built to hold up when a lot of players are on at once.", stack: ["Next.js", "Nest.js", "PostgreSQL", "Redis"], featured: true, category: "Gaming", url: null, img: null },
+  { title: "Hospitality Management Platform", client: "Confidential · Swiss Client", desc: "A hospitality SaaS for the Swiss market: a booking engine, room and property management, payments, a guest portal, and staff workflows. Wired up to outside payment providers and channel managers.", stack: ["Next.js", "Nest.js", "PostgreSQL", "Docker", "Stripe"], featured: true, category: "Hospitality", url: null, img: null },
+  { title: "Architecture CRM", client: "Confidential · Swiss Client", desc: "A CRM built for architecture firms. It runs projects start to finish, with a client portal, tender tracking, document and drawing management, team collaboration, and billing.", stack: ["Vue.js", "Node.js", "PostgreSQL", "Docker"], featured: true, category: "CRM", url: null, img: null },
+  { title: "Legacy Stack Migration", client: "Confidential · Enterprise", desc: "Modernised a large legacy app. I audited the old codebase, planned the migration, and moved it to a modern stack in phases with zero downtime. It came out faster and far easier to work on.", stack: ["Next.js", "TypeScript", "Node.js", "Docker", "PostgreSQL"], featured: true, category: "Migration", url: null, img: null },
+  { title: "CRM Replacement & Data Migration", client: "Confidential · Enterprise", desc: "Replaced a third-party CRM with a fully custom build. Migrated all the client data, rebuilt the workflows, and switched everyone over with no data loss. Team trained and handed over on schedule.", stack: ["React.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "Migration", url: null, img: null },
+  { title: "SaaS Analytics Dashboard", client: "Austrian Tech Company", desc: "A real-time analytics dashboard with role-based access, clear data visualisation, and a tuned REST API behind it.", stack: ["Vue.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "SaaS", url: null, img: null },
   { title: "B2B Client Portal", client: "Swiss B2B Client", desc: "Secure portal with document management, custom approval workflows, and multi-tenant architecture.", stack: ["React.js", "Express.js", "PostgreSQL"], featured: true, category: "Web App", url: null, img: null },
   // ── Freelance / independent (live, with screenshots) ──────────────────────
   { title: "Erblin3 — Fashion E-Commerce", client: "Personal · Client Project", desc: "Full WooCommerce fashion e-commerce for luxury clothing brand — 15+ collections (Bridal, VIVIDÉRA, DOMINA, Perla di Fuoco…), worldwide free shipping, product catalogue, cart, account system, and video-led homepage. Live and selling.", stack: ["WordPress", "WooCommerce", "PHP", "Elementor"], featured: false, category: "E-Commerce", url: "https://erblin3.com", img: "/shots/erblin3.jpg" },
@@ -182,6 +192,9 @@ const CV_URL = "/Edita-Latifi-CV.pdf";
 const EMAIL = "editalatifi1996@gmail.com";
 const PHONE = "+383 49 178 050";
 const LINKEDIN = "https://www.linkedin.com/in/edita-latifi";
+const GITHUB = "https://github.com/EditaLatifi";
+const GITHUB_REPO = "https://github.com/EditaLatifi/editadev";
+const CALENDLY = "https://calendly.com/editalatifi1996/30min";
 
 const scrollToId = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 const downloadCV = () => {
@@ -209,6 +222,8 @@ const COMMANDS = [
   { id: "cv", label: "Download CV (PDF)", hint: "download", action: downloadCV },
   { id: "email", label: "Email Edita", hint: "link", action: () => { window.location.href = `mailto:${EMAIL}`; } },
   { id: "linkedin", label: "Open LinkedIn", hint: "link", action: () => window.open(LINKEDIN, "_blank") },
+  { id: "github", label: "Open GitHub", hint: "link", action: () => window.open(GITHUB, "_blank") },
+  { id: "call", label: "Book a 30-min call", hint: "calendly", action: () => window.open(CALENDLY, "_blank") },
 ];
 
 /* ─── SHARED UI HELPERS ─────────────────────────────────────────────────── */
@@ -486,6 +501,12 @@ function Nav({ onOpenPalette }) {
             >{s}</button>
           ))}
         </div>
+        <a href={GITHUB} target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub profile"
+          style={{ display: "inline-flex", alignItems: "center", color: C.textMuted, transition: "color .2s" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = C.cyan)}
+          onMouseLeave={(e) => (e.currentTarget.style.color = C.textMuted)}>
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
         <button onClick={onOpenPalette} title="Command palette (Ctrl/⌘ + K)" aria-label="Open command palette"
           style={{ display: "inline-flex", alignItems: "center", gap: ".4rem", padding: ".35rem .6rem", background: "transparent", border: `1px solid ${C.border}`, borderRadius: 3, color: C.textMuted, fontFamily: "'DM Mono',monospace", fontSize: ".62rem", letterSpacing: ".06em", cursor: "pointer", transition: "all .2s" }}
           onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.cyan; e.currentTarget.style.color = C.cyan; }}
@@ -532,6 +553,15 @@ function Hero({ ready }) {
     <section ref={sectionRef} aria-label="Intro" style={{ "--mx": 0, "--my": 0, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", textAlign: "center", padding: "80px clamp(1.5rem,6vw,6rem) 4rem", position: "relative", zIndex: 1 }}>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0, background: `radial-gradient(ellipse 60% 50% at calc(50% + (var(--mx) * 0.4%)) calc(42% + (var(--my) * 0.4%)), ${C.cyan}0b 0%, transparent 68%)` }} />
 
+      {/* Availability badge */}
+      <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
+        style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", marginBottom: "1.6rem", padding: ".4rem .9rem", border: `1px solid ${C.greenDim}`, borderRadius: 999, background: `${C.green}0a`, textDecoration: "none", fontFamily: "'DM Mono',monospace", fontSize: ".68rem", letterSpacing: ".1em", textTransform: "uppercase", color: C.textBody, opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(10px)", transition: "all .8s ease .15s, border-color .2s, color .2s" }}
+        onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.green; e.currentTarget.style.color = C.green; }}
+        onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.greenDim; e.currentTarget.style.color = C.textBody; }}>
+        <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: C.green, boxShadow: `0 0 8px ${C.green}`, animation: reduced ? "none" : "glow 2s ease-in-out infinite" }} />
+        Open to select projects
+      </a>
+
       {/* Name */}
       <div style={{ position: "relative", marginBottom: "2rem", opacity: vis ? 1 : 0, transform: vis ? "none" : "scale(.9)", transition: "all .9s cubic-bezier(.16,1,.3,1) .05s" }}>
         <h1 aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(4rem,13vw,11rem)", lineHeight: 0.88, letterSpacing: "-.03em", WebkitTextStroke: `1px ${C.cyan}1a`, color: "transparent", position: "absolute", inset: 0, transform: "translate(calc(var(--mx) * 0.65px), calc(var(--my) * 0.65px))", transition: "transform .1s linear", userSelect: "none", whiteSpace: "nowrap" }}>EDITA<br />LATIFI</h1>
@@ -566,6 +596,11 @@ function Hero({ ready }) {
           onMouseEnter={(e) => (e.currentTarget.style.background = "#f0f6ff")}
           onMouseLeave={(e) => (e.currentTarget.style.background = C.cyan)}
         >View Work</button>
+        <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
+          style={{ padding: ".88rem 2.2rem", border: `1px solid ${C.greenDim}`, color: C.green, background: "transparent", fontFamily: "'DM Mono',monospace", fontSize: ".78rem", letterSpacing: ".12em", textTransform: "uppercase", borderRadius: 2, transition: "all .2s", cursor: "pointer", textDecoration: "none" }}
+          onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.green; e.currentTarget.style.background = `${C.green}12`; }}
+          onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.greenDim; e.currentTarget.style.background = "transparent"; }}
+        >Book a Call</a>
         <button onClick={() => scrollToId("contact")}
           style={{ padding: ".88rem 2.2rem", border: `1px solid ${C.border}`, color: C.textBody, background: "transparent", fontFamily: "'DM Mono',monospace", fontSize: ".78rem", letterSpacing: ".12em", textTransform: "uppercase", borderRadius: 2, transition: "all .2s", cursor: "pointer" }}
           onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.cyan; e.currentTarget.style.color = C.cyan; }}
@@ -809,6 +844,17 @@ function CaseStudy({ cs, i }) {
           <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.textMuted, marginBottom: "1.1rem" }}>{cs.client}</div>
           <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.7, margin: "0 0 1.2rem" }}>{cs.context}</p>
 
+          {cs.metrics && (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: ".6rem", margin: "0 0 1.3rem" }}>
+              {cs.metrics.map((m) => (
+                <div key={m.l} style={{ flex: "1 1 0", minWidth: 92, background: `${C.cyan}08`, border: `1px solid ${C.border}`, borderRadius: 4, padding: ".7rem .8rem" }}>
+                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.25rem", color: C.cyan, lineHeight: 1, letterSpacing: "-.01em" }}>{m.v}</div>
+                  <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".58rem", color: C.textMuted, letterSpacing: ".08em", textTransform: "uppercase", marginTop: ".35rem", lineHeight: 1.3 }}>{m.l}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
           {open && (
             <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem", marginBottom: "1.3rem" }}>
               <CaseRow label="My role" text={cs.role} />
@@ -925,6 +971,67 @@ function Projects() {
   );
 }
 
+/* Maps a stack token to its architecture layer, for the anonymized company diagrams. */
+const STACK_LAYER = {
+  "React.js": "ui", React: "ui", "Next.js": "ui", "Vue.js": "ui", Vue: "ui", Angular: "ui", "Tailwind CSS": "ui", Tailwind: "ui", Elementor: "ui",
+  "Node.js": "api", Node: "api", "Nest.js": "api", "Express.js": "api", Express: "api", Laravel: "api", PHP: "api", Python: "api", APIs: "api",
+  PostgreSQL: "data", MySQL: "data", MongoDB: "data", Prisma: "data", Redis: "data",
+  Docker: "infra", Vercel: "infra", Stripe: "infra", Prismic: "infra", RBAC: "infra", WordPress: "infra", WooCommerce: "infra", TypeScript: "infra",
+};
+
+/* Abstract, NDA-safe architecture diagram built from a project's real stack. */
+function ArchDiagram({ p }) {
+  const W = 320, H = 168, nodeH = 21;
+  const layerOf = (s) => STACK_LAYER[s] || "api";
+  const ui = p.stack.filter((s) => layerOf(s) === "ui");
+  const api = p.stack.filter((s) => layerOf(s) === "api");
+  const data = p.stack.filter((s) => ["data", "infra"].includes(layerOf(s)));
+  let bands = [
+    { label: "Client", items: ui, color: C.cyan },
+    { label: "Services", items: api, color: C.cyan },
+    { label: "Data · Infra", items: data, color: C.green },
+  ].filter((b) => b.items.length);
+  if (!bands.length) bands = [{ label: "Stack", items: p.stack, color: C.cyan }];
+  const n = bands.length;
+  const topY = 32, botY = H - 28;
+  const yAt = (i) => (n === 1 ? H / 2 : topY + (i * (botY - topY)) / (n - 1));
+  const measure = (s) => Math.max(44, s.length * 6.2 + 16);
+  const layout = bands.map((b, i) => {
+    const ws = b.items.map(measure);
+    const gx = 10;
+    const total = ws.reduce((a, c) => a + c, 0) + gx * (b.items.length - 1);
+    let x = (W - total) / 2;
+    const nodes = b.items.map((s, j) => { const node = { s, x, w: ws[j], y: yAt(i) }; x += ws[j] + gx; return node; });
+    return { ...b, y: yAt(i), nodes };
+  });
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img"
+      aria-label={`${p.title} — architecture: ${bands.map((b) => `${b.label} (${b.items.join(", ")})`).join("; ")}`} style={{ display: "block" }}>
+      <defs>
+        <pattern id="archgrid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.6" fill={`${C.cyan}1a`} />
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width={W} height={H} fill="url(#archgrid)" />
+      <line x1={W / 2} y1={layout[0].y} x2={W / 2} y2={layout[n - 1].y} stroke={`${C.cyan}22`} strokeWidth="1" />
+      {layout.map((b, i) => (i < n - 1 ? b.nodes.map((nd, j) => (
+        <line key={`c${i}-${j}`} x1={nd.x + nd.w / 2} y1={nd.y + nodeH / 2} x2={W / 2} y2={layout[i + 1].y - nodeH / 2} stroke={`${b.color}20`} strokeWidth="1" />
+      )) : null))}
+      {layout.map((b, i) => (
+        <g key={`b${i}`}>
+          <text x="12" y={b.y - nodeH / 2 - 5} fill={C.textDim} fontFamily="'DM Mono',monospace" fontSize="7" letterSpacing="1.5">{b.label.toUpperCase()}</text>
+          {b.nodes.map((nd, j) => (
+            <g key={`n${i}-${j}`}>
+              <rect x={nd.x} y={nd.y - nodeH / 2} width={nd.w} height={nodeH} rx="3" fill={`${b.color}12`} stroke={`${b.color}55`} strokeWidth="1" />
+              <text x={nd.x + nd.w / 2} y={nd.y + 3.5} textAnchor="middle" fill={C.textBody} fontFamily="'DM Mono',monospace" fontSize="9.5">{nd.s}</text>
+            </g>
+          ))}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 function PCard({ p, i, v }) {
   const [h, setH] = useState(false);
   const [imgOk, setImgOk] = useState(Boolean(p.img));
@@ -938,6 +1045,8 @@ function PCard({ p, i, v }) {
         {showImg ? (
           <img src={p.img} alt={`${p.title} — screenshot`} loading="lazy" onError={() => setImgOk(false)}
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", transform: h ? "scale(1.05)" : "scale(1)", transition: "transform .5s ease" }} />
+        ) : p.featured ? (
+          <ArchDiagram p={p} />
         ) : (
           <div style={{ textAlign: "center" }}>
             <div style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.9rem", fontWeight: 800, WebkitTextStroke: `1px ${C.cyan}55`, color: "transparent", letterSpacing: "-.02em" }}>{p.title.slice(0, 2).toUpperCase()}</div>
@@ -1136,6 +1245,8 @@ const CONTACT_LINKS = [
   { label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
   { label: "Phone", value: PHONE, href: "tel:+38349178050" },
   { label: "LinkedIn", value: "linkedin.com/in/edita-latifi", href: LINKEDIN },
+  { label: "GitHub", value: "github.com/EditaLatifi", href: GITHUB },
+  { label: "Book a call", value: "30-min intro · Calendly", href: CALENDLY },
 ];
 
 function Contact() {
@@ -1197,6 +1308,14 @@ function Footer() {
           onMouseEnter={(e) => (e.currentTarget.style.color = C.cyan)}
           onMouseLeave={(e) => (e.currentTarget.style.color = C.textMuted)}
         >{EMAIL}</a>
+        <div style={{ display: "flex", gap: "1rem", marginTop: ".6rem" }}>
+          {[{ l: "GitHub", h: GITHUB }, { l: "LinkedIn", h: LINKEDIN }, { l: "Source ↗", h: GITHUB_REPO }, { l: "Book a call", h: CALENDLY }].map((s) => (
+            <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer"
+              style={{ fontFamily: "'DM Mono',monospace", fontSize: ".64rem", color: C.textMuted, letterSpacing: ".08em", textTransform: "uppercase", textDecoration: "none", transition: "color .2s" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = C.cyan)}
+              onMouseLeave={(e) => (e.currentTarget.style.color = C.textMuted)}>{s.l}</a>
+          ))}
+        </div>
       </div>
       <div style={{ textAlign: "right" }}>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.textMuted, letterSpacing: ".06em" }}>
