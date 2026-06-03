@@ -1442,6 +1442,15 @@ function Testimonials() {
   const [ref, v] = useInView();
   const [active, setActive] = useState(0);
   const t = TESTIMONIALS[active];
+  const touchX = useRef(null);
+  const go = (dir) => setActive((a) => (a + dir + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    if (touchX.current == null) return;
+    const dx = e.changedTouches[0].clientX - touchX.current;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+    touchX.current = null;
+  };
 
   return (
     <section id="testimonials" ref={ref} style={sec}>
@@ -1463,7 +1472,7 @@ function Testimonials() {
         }}
       >
         <div>
-          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "clamp(1.4rem,5vw,2.5rem)", position: "relative", overflow: "hidden", boxShadow: `0 0 40px ${C.cyan}08` }}>
+          <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "clamp(1.4rem,5vw,2.5rem)", position: "relative", overflow: "hidden", boxShadow: `0 0 40px ${C.cyan}08`, touchAction: "pan-y" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.cyan},${C.green})` }} />
             <div aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontSize: "5rem", lineHeight: 0.8, color: `${C.cyan}25`, fontWeight: 800, marginBottom: "1rem", userSelect: "none" }}>&ldquo;</div>
             <div style={{ display: "flex", gap: 4, marginBottom: "1.2rem" }} aria-label={`${t.stars} out of 5 stars`}>
@@ -1492,10 +1501,19 @@ function Testimonials() {
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: ".6rem", marginTop: "1.5rem", alignItems: "center" }}>
-            {TESTIMONIALS.map((_, i) => (
-              <button key={i} onClick={() => setActive(i)} aria-label={`Show testimonial ${i + 1}`} style={{ width: active === i ? 24 : 8, height: 8, borderRadius: 4, border: "none", background: active === i ? C.cyan : C.border, cursor: "pointer", transition: "all .3s", padding: 0 }} />
-            ))}
+          <div style={{ display: "flex", gap: ".8rem", marginTop: "1.5rem", alignItems: "center" }}>
+            <button onClick={() => go(-1)} aria-label="Previous testimonial"
+              style={{ width: 34, height: 34, borderRadius: "50%", border: `1px solid ${C.border}`, background: "transparent", color: C.cyan, fontSize: "1.1rem", lineHeight: 1, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .2s" }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.cyan; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; }}>‹</button>
+            <div style={{ display: "flex", gap: ".6rem", alignItems: "center" }}>
+              {TESTIMONIALS.map((_, i) => (
+                <button key={i} onClick={() => setActive(i)} aria-label={`Show testimonial ${i + 1}`} style={{ width: active === i ? 24 : 8, height: 8, borderRadius: 4, border: "none", background: active === i ? C.cyan : C.border, cursor: "pointer", transition: "all .3s", padding: 0 }} />
+              ))}
+            </div>
+            <button onClick={() => go(1)} aria-label="Next testimonial"
+              style={{ width: 34, height: 34, borderRadius: "50%", border: `1px solid ${C.border}`, background: "transparent", color: C.cyan, fontSize: "1.1rem", lineHeight: 1, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .2s" }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.cyan; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; }}>›</button>
+            <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".58rem", color: C.textDim, letterSpacing: ".12em", textTransform: "uppercase", marginLeft: ".2rem" }}>swipe</span>
           </div>
         </div>
 
