@@ -105,6 +105,9 @@ body {
   .exp-grid {
     grid-template-columns: 1fr !important;
   }
+  .now-grid {
+    grid-template-columns: 1fr !important;
+  }
   .exp-tabs {
     flex-direction: row !important;
     flex-wrap: wrap !important;

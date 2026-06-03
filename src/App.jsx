@@ -33,16 +33,16 @@ const SKILLS = {
 
 const EXPERIENCE = [
   { company: "Ringana", role: "Full Stack Engineer", period: "Sep 2025 – Present", location: "Austria · Full Remote", color: C.cyan, points: ["End-to-end feature ownership across two product teams", "Led legacy PHP → modern stack migrations", "Rebuilt frontends: Nuxt.js, Next.js, Vue.js, WordPress", "TypeScript, PHP, Docker · Agile with Git & Bitbucket"] },
-  { company: "the eksperts", role: "Full Stack Engineer & Tech Team Lead", period: "Mar 2023 – Sep 2025", location: "Switzerland · Remote", color: C.green, points: ["Led technical team 2+ years while staying fully hands-on", "Architected REST APIs powering high-traffic client platforms", "Ran sprint planning, backlog, daily standups", "Established code reviews — cut production incidents significantly"] },
-  { company: "StarLabs", role: "Full Stack Engineer", period: "2021 – 2023", location: "Kosovo", color: C.cyan, points: ["Built high-performance apps for multiple clients concurrently", "Introduced code reviews — reduced bugs significantly", "WCAG accessibility compliance across all products", "Daily Agile standups, Git workflows, designer & QA collaboration"] },
-  { company: "MakerMinds GmbH", role: "Full Stack Engineer & Project Leader", period: "2019 – 2021", location: "Germany · Remote", color: C.green, points: ["Delivered 7 full-stack applications from scratch", "Trained 80+ students in Full Stack Web Development — HTML, CSS, JS, Node.js, React, APIs, databases", "Mentored interns through live projects — several progressed into junior engineer roles", "Set technical direction, worked directly with stakeholders on delivery"] },
-  { company: "SignSoft", role: "Full Stack Engineer & Project Manager", period: "2018 – 2019", location: "Germany & Kosovo", color: C.cyan, points: ["Built production apps: React, Vue, Angular, Node, Laravel", "Increased user engagement by 60%", "EEA-compliant websites — EU data protection standards", "API testing with Postman, direct client communication"] },
+  { company: "the eksperts", role: "Full Stack Engineer & Tech Team Lead", period: "Mar 2023 – Sep 2025", location: "Switzerland · Remote", color: C.green, points: ["Led technical team 2+ years while staying fully hands-on", "Architected REST APIs powering high-traffic client platforms", "Ran sprint planning, backlog, daily standups", "Established code reviews that cut production incidents significantly"] },
+  { company: "StarLabs", role: "Full Stack Engineer", period: "2021 – 2023", location: "Kosovo", color: C.cyan, points: ["Built high-performance apps for multiple clients concurrently", "Introduced code reviews that reduced bugs significantly", "WCAG accessibility compliance across all products", "Daily Agile standups, Git workflows, designer & QA collaboration"] },
+  { company: "MakerMinds GmbH", role: "Full Stack Engineer & Project Leader", period: "2019 – 2021", location: "Germany · Remote", color: C.green, points: ["Delivered 7 full-stack applications from scratch", "Trained 80+ students in Full Stack Web Development: HTML, CSS, JS, Node.js, React, APIs, databases", "Mentored interns through live projects, and several progressed into junior engineer roles", "Set technical direction, worked directly with stakeholders on delivery"] },
+  { company: "SignSoft", role: "Full Stack Engineer & Project Manager", period: "2018 – 2019", location: "Germany & Kosovo", color: C.cyan, points: ["Built production apps: React, Vue, Angular, Node, Laravel", "Increased user engagement by 60%", "EEA-compliant websites built to EU data protection standards", "API testing with Postman, direct client communication"] },
 ];
 
 /* Featured case studies — the "how I work" proof. */
 const CASE_STUDIES = [
   {
-    title: "IP3 — Custom CRM",
+    title: "IP3 · Custom CRM",
     client: "Client project · German-speaking market",
     category: "SaaS · CRM",
     img: "/shots/ip3-crm.jpg",
@@ -54,12 +54,12 @@ const CASE_STUDIES = [
       "One person covering the whole thing, from data model to UI, while keeping it simple enough to live in daily without a manual. And it all had to work in German.",
     did: [
       "Built the full stack: React on the front, a Nest.js API behind it, PostgreSQL underneath.",
-      "Modelled the full workflow — clients through the pipeline, plus the freelancers the business contracts for different jobs — so the whole team works in one place instead of five.",
+      "Modelled the full workflow, from clients moving through the pipeline to the freelancers the business contracts for different jobs, so the whole team works in one place instead of five.",
       "Set up role-based access so each person sees only what their job needs, nothing more.",
       "Added a reporting dashboard and a secure password-recovery flow, with the whole interface in German.",
     ],
     outcome:
-      "It's live, and a team of 12 runs on it every day — tracking around 40 clients plus the freelancers they contract for different jobs, all in one system they own instead of renting one that almost fits.",
+      "It's live, and a team of 12 runs on it every day. They track around 40 clients plus the freelancers they contract for different jobs, all in one system they own instead of renting one that almost fits.",
     metrics: [
       { v: "12", l: "team members use it daily" },
       { v: "~40", l: "clients managed" },
@@ -68,7 +68,7 @@ const CASE_STUDIES = [
     stack: ["React.js", "Nest.js", "PostgreSQL", "RBAC"],
   },
   {
-    title: "Loyalito — Loyalty & Rewards SaaS",
+    title: "Loyalito · Loyalty & Rewards SaaS",
     client: "Client project",
     category: "SaaS",
     img: "/shots/loyalito.jpg",
@@ -85,7 +85,7 @@ const CASE_STUDIES = [
       "Built the notifications system that lets businesses reach their customers.",
     ],
     outcome:
-      "It's a dark-themed production app, live in active use — running at two MrBurger venues in Prague, where customers earn rewards and get push notifications, with each business isolated on its own tenant.",
+      "It's a dark-themed production app, live in active use. It runs at two MrBurger venues in Prague, where customers earn rewards and get push notifications, with each business isolated on its own tenant.",
     metrics: [
       { v: "2", l: "live MrBurger venues · Prague" },
       { v: "1-tap", l: "Google sign-in" },
@@ -100,18 +100,18 @@ const CASE_STUDIES = [
     img: null,
     visual: "ai",
     context:
-      "Across the products I work on, two things keep paying off: building AI into the product where it earns its place, and automating the dull machinery around delivery.",
-    role: "The engineer who treats AI as a tool, not a sales pitch.",
+      "I use AI a lot in how I build, but I read everything it produces before it goes near the codebase. A fast model with a loose prompt writes code that works and is structured badly, so for me AI always comes with a review.",
+    role: "Engineer who uses AI hands-on and reviews every line of it.",
     challenge:
-      "Using AI where it genuinely speeds things up without letting quality slip, and automating the right steps rather than every step.",
+      "Getting the speed AI gives you without letting the structure of the codebase slip, and automating the right steps rather than every step.",
     did: [
-      "Wire up n8n automations that connect tools, sync data between them, and trigger actions on their own.",
-      "Automate the repetitive parts of delivery: content, data handling, routine checks.",
-      "Build AI features into products where they actually help the people using them.",
-      "Reach for AI deliberately to move faster and hold the quality bar.",
+      "Wire up n8n automations that move data between tools and trigger routine work on their own.",
+      "Review what AI generates and refactor it, pulling shared calls, queries and error handling into one place a component can reuse.",
+      "Build AI into products only where it genuinely helps the people using them.",
+      "Automate the repetitive parts of delivery so they stop eating real time.",
     ],
     outcome:
-      "Less time lost to busywork, and AI used as a working part of the toolkit rather than a gimmick bolted on top.",
+      "Time saved on the repetitive work, and a codebase that stays structured because nothing AI writes goes in without a review.",
     stack: ["AI / LLMs", "n8n", "Automation", "APIs"],
   },
   {
@@ -135,6 +135,32 @@ const CASE_STUDIES = [
       "Fewer incidents in production, developers who got better at their craft, and steady, strong feedback from the people I work with.",
     stack: ["Agile / Scrum", "Code Reviews", "Mentoring", "Workshops"],
   },
+  {
+    title: "Legacy Migration, Zero Downtime",
+    client: "Enterprise · confidential",
+    category: "Migration · Modernisation",
+    img: null,
+    visual: "migration",
+    context:
+      "A large, long-lived application had become hard to change. Years of features sat on an ageing stack, and every new request took longer than it should. It needed to move to a modern stack, without taking the product offline or losing a single record.",
+    role: "Lead on the migration: planning, execution, and the data.",
+    challenge:
+      "Replace the foundation under a live application while real users keep using it, with no maintenance window and no data loss.",
+    did: [
+      "Audited the old codebase first, finding what was actually used, what was dead, and where the data really lived, before writing any new code.",
+      "Migrated slice by slice, strangler-style: the new stack ran in front of the old one and took over a piece of traffic at a time.",
+      "Ran old and new side by side for weeks, with instant rollback if anything looked off.",
+      "Wrote checks that compared old and new data on every run, and didn't move a slice until the numbers matched exactly.",
+    ],
+    outcome:
+      "It rolled out in phases with zero downtime and no data loss. The team got a codebase they could work in again, and the users never noticed it happened.",
+    metrics: [
+      { v: "0", l: "downtime during cutover" },
+      { v: "Phased", l: "slice-by-slice rollout" },
+      { v: "100%", l: "data integrity preserved" },
+    ],
+    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+  },
 ];
 
 const PROJECTS = [
@@ -150,24 +176,24 @@ const PROJECTS = [
   { title: "SaaS Analytics Dashboard", client: "Austrian Tech Company", desc: "A real-time analytics dashboard with role-based access, clear data visualisation, and a tuned REST API behind it.", stack: ["Vue.js", "Nest.js", "PostgreSQL", "Docker"], featured: true, category: "SaaS", url: null, img: null },
   { title: "B2B Client Portal", client: "Swiss B2B Client", desc: "Secure portal with document management, custom approval workflows, and multi-tenant architecture.", stack: ["React.js", "Express.js", "PostgreSQL"], featured: true, category: "Web App", url: null, img: null },
   // ── Freelance / independent (live, with screenshots) ──────────────────────
-  { title: "Erblin3 — Fashion E-Commerce", client: "Personal · Client Project", desc: "Full WooCommerce fashion e-commerce for luxury clothing brand — 15+ collections (Bridal, VIVIDÉRA, DOMINA, Perla di Fuoco…), worldwide free shipping, product catalogue, cart, account system, and video-led homepage. Live and selling.", stack: ["WordPress", "WooCommerce", "PHP", "Elementor"], featured: false, category: "E-Commerce", url: "https://erblin3.com", img: "/shots/erblin3.jpg" },
-  { title: "MrBurger — QR Code Menu", client: "Personal · Client Project", desc: "Digital QR scan menu for Prague restaurant MrBurger Holešovice — part of the B&C restaurant ecosystem. Multilingual (CS/EN), full menu with allergen labelling, food photography, and mobile-first design. Scanned daily by guests.", stack: ["Next.js", "Tailwind CSS", "Vercel"], featured: false, category: "Website", url: "https://mrburgermenu.vercel.app", img: "/shots/mrburger.jpg" },
-  { title: "Loyalito Platform", client: "Personal · Client Project", desc: "Business loyalty & rewards SaaS — secure business dashboard, client sign-in, points engine, and multi-tenant architecture. Dark-themed production app, live and in active use.", stack: ["Next.js", "Node.js", "PostgreSQL"], featured: false, cased: true, category: "SaaS", url: "https://layoutynextjs.vercel.app", img: "/shots/loyalito.jpg" },
-  { title: "Gazeta Demos", client: "Personal · Client Project", desc: "Albanian-language news portal — full editorial CMS with breaking news, categories, live search, and ad integration. Live platform serving Kosovo readership daily.", stack: ["WordPress", "PHP", "MySQL"], featured: false, category: "Media", url: "https://gazetademos.com", img: "/shots/gazeta-demos.jpg" },
-  { title: "Virton Invest — River Residence", client: "Personal · Client Project", desc: "Real estate investment platform showcasing luxury riverside development — listings, investment calculator, inquiry system.", stack: ["Next.js", "Node.js", "PostgreSQL"], featured: false, category: "Real Estate", url: null, img: null },
-  { title: "IP3 CRM System", client: "Personal · Client Project", desc: "Full custom CRM built for German-speaking market — customer lifecycle management, pipeline tracking, reporting dashboard, role-based access control, and password recovery flow. Live and in active use.", stack: ["React.js", "Nest.js", "PostgreSQL"], featured: false, cased: true, category: "SaaS", url: "https://crm-frontend-xi-three.vercel.app/login", img: "/shots/ip3-crm.jpg" },
-  { title: "B&C — Be Brave and Creative", client: "Personal · Client Project", desc: "Brand website for Prague F&B company behind MrBurger and Pizzaiolo — company identity, concept presentation for both restaurant brands, and contact. Part of a 3-site delivery for one client.", stack: ["Next.js", "Tailwind CSS"], featured: false, category: "Branding", url: "https://www.by-bc.com", img: "/shots/bc.jpg" },
-  { title: "Muha Investments", client: "Personal · Client Project", desc: "Business website for transport & property development company in Blantyre, Malawi — passenger transport, goods logistics, and property development. Live in Africa.", stack: ["Next.js", "Tailwind CSS", "Node.js"], featured: false, category: "Website", url: "https://www.muha-investments.com", img: "/shots/muha.jpg" },
-  { title: "Idon Inžinering", client: "Personal · Client Project", desc: "Slovenian engineering & construction company website — 20+ years experience, service pages, project gallery, and lead generation. Built in Slovenian.", stack: ["WordPress", "PHP", "Elementor"], featured: false, category: "Website", url: "https://idon.si", img: "/shots/idon.jpg" },
-  { title: "Dizajn Group", client: "Personal · Client Project", desc: "Product showcase website for Kosovo doors & kitchens company — wholesale & retail since 2015, 75+ sales points across Kosovo, product catalogue with PDF download, inspiration gallery, and dealer contact.", stack: ["WordPress", "Elementor", "PHP"], featured: false, category: "Website", url: "https://dizajn-group.com", img: "/shots/dizajn-group.jpg" },
-  { title: "Pizzaiolo — Restaurant Website", client: "Personal · Client Project", desc: "Full restaurant website for Italian pizzeria in Prague Žižkov — multilingual (CZ/EN), online menu with ordering integration (Bolt Food & Wolt), blog, lunch menu, and SEO optimisation. 500+ reviews, live and in active use.", stack: ["Next.js", "Vercel", "Tailwind CSS"], featured: false, category: "Website", url: "https://pizzaiolo-sigma.vercel.app", img: "/shots/pizzaiolo.jpg" },
-  { title: "Orama Transport", client: "Personal · Client Project", desc: "Full business website for Cape Town's premier transport company — bus services, same-day courier, car hire, and accommodation under one platform. Quote system, multi-service pages, 24/7 support, 5,000+ clients. Live in South Africa.", stack: ["Next.js", "Tailwind CSS", "Node.js"], featured: false, category: "Website", url: "https://oramatransport.com", img: "/shots/orama.jpg" },
+  { title: "Erblin3 · Fashion E-Commerce", client: "Personal · Client Project", desc: "Full WooCommerce fashion e-commerce for a luxury clothing brand, with 15+ collections (Bridal, VIVIDÉRA, DOMINA, Perla di Fuoco…), worldwide free shipping, product catalogue, cart, account system, and a video-led homepage. Live and selling.", stack: ["WordPress", "WooCommerce", "PHP", "Elementor"], featured: false, category: "E-Commerce", url: "https://erblin3.com", img: "/shots/erblin3.jpg" },
+  { title: "MrBurger · QR Code Menu", client: "Personal · Client Project", desc: "Digital QR scan menu for Prague restaurant MrBurger Holešovice, part of the B&C restaurant ecosystem. Multilingual (CS/EN), full menu with allergen labelling, food photography, and mobile-first design. Scanned daily by guests.", stack: ["Next.js", "Tailwind CSS", "Vercel"], featured: false, category: "Website", url: "https://mrburgermenu.vercel.app", img: "/shots/mrburger.jpg" },
+  { title: "Loyalito Platform", client: "Personal · Client Project", desc: "Business loyalty & rewards SaaS with a secure business dashboard, client sign-in, points engine, and multi-tenant architecture. Dark-themed production app, live and in active use.", stack: ["Next.js", "Node.js", "PostgreSQL"], featured: false, cased: true, category: "SaaS", url: "https://layoutynextjs.vercel.app", img: "/shots/loyalito.jpg" },
+  { title: "Gazeta Demos", client: "Personal · Client Project", desc: "Albanian-language news portal with a full editorial CMS: breaking news, categories, live search, and ad integration. Live platform serving Kosovo readership daily.", stack: ["WordPress", "PHP", "MySQL"], featured: false, category: "Media", url: "https://gazetademos.com", img: "/shots/gazeta-demos.jpg" },
+  { title: "Virton Invest · River Residence", client: "Personal · Client Project", desc: "Real estate investment platform showcasing a luxury riverside development: listings, investment calculator, inquiry system.", stack: ["Next.js", "Node.js", "PostgreSQL"], featured: false, category: "Real Estate", url: null, img: null },
+  { title: "IP3 CRM System", client: "Personal · Client Project", desc: "Full custom CRM built for the German-speaking market: customer lifecycle management, pipeline tracking, reporting dashboard, role-based access control, and password recovery flow. Live and in active use.", stack: ["React.js", "Nest.js", "PostgreSQL"], featured: false, cased: true, category: "SaaS", url: "https://crm-frontend-xi-three.vercel.app/login", img: "/shots/ip3-crm.jpg" },
+  { title: "B&C · Be Brave and Creative", client: "Personal · Client Project", desc: "Brand website for the Prague F&B company behind MrBurger and Pizzaiolo: company identity, concept presentation for both restaurant brands, and contact. Part of a 3-site delivery for one client.", stack: ["Next.js", "Tailwind CSS"], featured: false, category: "Branding", url: "https://www.by-bc.com", img: "/shots/bc.jpg" },
+  { title: "Muha Investments", client: "Personal · Client Project", desc: "Business website for a transport & property development company in Blantyre, Malawi: passenger transport, goods logistics, and property development. Live in Africa.", stack: ["Next.js", "Tailwind CSS", "Node.js"], featured: false, category: "Website", url: "https://www.muha-investments.com", img: "/shots/muha.jpg" },
+  { title: "Idon Inžinering", client: "Personal · Client Project", desc: "Slovenian engineering & construction company website with 20+ years of experience, service pages, project gallery, and lead generation. Built in Slovenian.", stack: ["WordPress", "PHP", "Elementor"], featured: false, category: "Website", url: "https://idon.si", img: "/shots/idon.jpg" },
+  { title: "Dizajn Group", client: "Personal · Client Project", desc: "Product showcase website for a Kosovo doors & kitchens company: wholesale & retail since 2015, 75+ sales points across Kosovo, product catalogue with PDF download, inspiration gallery, and dealer contact.", stack: ["WordPress", "Elementor", "PHP"], featured: false, category: "Website", url: "https://dizajn-group.com", img: "/shots/dizajn-group.jpg" },
+  { title: "Pizzaiolo · Restaurant Website", client: "Personal · Client Project", desc: "Full restaurant website for an Italian pizzeria in Prague Žižkov: multilingual (CZ/EN), online menu with ordering integration (Bolt Food & Wolt), blog, lunch menu, and SEO optimisation. 500+ reviews, live and in active use.", stack: ["Next.js", "Vercel", "Tailwind CSS"], featured: false, category: "Website", url: "https://pizzaiolo-sigma.vercel.app", img: "/shots/pizzaiolo.jpg" },
+  { title: "Orama Transport", client: "Personal · Client Project", desc: "Full business website for Cape Town's premier transport company: bus services, same-day courier, car hire, and accommodation under one platform. Quote system, multi-service pages, 24/7 support, 5,000+ clients. Live in South Africa.", stack: ["Next.js", "Tailwind CSS", "Node.js"], featured: false, category: "Website", url: "https://oramatransport.com", img: "/shots/orama.jpg" },
 ];
 
 /* ─── ABOUT / LANGUAGES ─────────────────────────────────────────────────── */
 const ABOUT_PARAS = [
   "I'm Edita. A full-stack engineer and tech lead based in Pristina, Kosovo, working with teams across Austria, Switzerland, and Germany.",
-  "I work closely with designers, product owners, QA and stakeholders. I run code reviews and mentor the developers around me. Most of it happens remotely, but I get on a plane when it helps. Workshops, planning, delivery, on-site with the team.",
+  "I write code every day, and I'm close to the rest of the team through dailies, sprint planning, code reviews and workshops. I work with designers, product owners, QA and DevOps, help test tickets before they're merged, and keep an eye on hotfixes through releases. Most of it is remote, and I'm open to relocating if a company needs me on-site.",
   "I work hard, and I do it honestly. I take a project from the first line of code to the day it goes live, and I own it the whole way. I care where I put that work, so I'm picky about the teams I say yes to.",
 ];
 
@@ -180,11 +206,126 @@ const BRINGS = [
   "Full-stack architecture & APIs",
 ];
 
-const WORKS_ACROSS = ["Austria", "Switzerland", "Germany", "Kosovo"];
+/* Playful reputation tags the team gave her. */
+const KNOWN_AS = ["The Pixel-Perfect Lady", "The Energy", "The Reminder"];
+
+const WORKS_ACROSS = ["Kosovo", "Germany", "Switzerland", "Austria", "Czechia", "Slovenia", "France", "Netherlands", "South Africa"];
 
 const LANGUAGES = [
   { name: "Albanian", level: "Native" },
   { name: "English", level: "Full Professional" },
+];
+
+/* ─── HOW I HELP / HOW I WORK ───────────────────────────────────────────── */
+const SERVICES = [
+  {
+    n: "01",
+    title: "Product, built end to end",
+    desc: "From an empty repo to something live: architecture, frontend, backend, database, all of it. You get one person who owns the whole thing, not a hand-off chain.",
+    tags: ["React / Next", "Node / Nest", "PostgreSQL"],
+  },
+  {
+    n: "02",
+    title: "Tech leadership for your team",
+    desc: "I lead and mentor the developers, run code reviews, set the standards, and keep delivery moving. I've trained 80+ developers and helped juniors grow into stronger engineers.",
+    tags: ["Code review", "Mentoring", "Agile / Scrum"],
+  },
+  {
+    n: "03",
+    title: "AI features & automation",
+    desc: "AI built into products where it genuinely helps, with everything it writes reviewed. Plus the repetitive work around delivery automated with n8n and a bit of custom tooling.",
+    tags: ["AI / LLMs", "n8n", "APIs"],
+  },
+];
+
+const PROCESS = [
+  { n: "01", title: "Scope", desc: "We get clear on the problem, the constraints, and what “done” actually means." },
+  { n: "02", title: "Build", desc: "I work in small increments, in the open, so you watch it take shape. No big-bang reveal." },
+  { n: "03", title: "Review", desc: "Code review, QA, and your feedback baked in along the way, not bolted on at the end." },
+  { n: "04", title: "Deliver", desc: "It goes live, it's documented, and your team can own it without me in the room." },
+];
+
+const COURSES = ["Arra Academy", "Probit Academy", "University of the People"];
+
+/* ─── CURRENTLY BUILDING — Edita updates this list + the date ───────────── */
+const NOW_UPDATED = "June 2026";
+const BUILDING = [
+  {
+    title: "GTM Automation",
+    tag: "GTM · Platform",
+    status: "In progress",
+    desc: "A GTM engineer runs on about ten separate tools. I'm automating that whole stack into one all-in-one platform, with a real app on top: dashboards and everything in a single place. I'm starting with it for my own use.",
+  },
+  {
+    title: "n8n Workflow Project",
+    tag: "n8n · Automation",
+    status: "In progress",
+    desc: "An n8n automation for the processes that eat my time. I hand the repetitive parts to it and stay more flexible for the work that actually needs me.",
+  },
+  {
+    title: "Second Brain for my laptop",
+    tag: "AI · Personal",
+    status: "In progress",
+    desc: "My own second brain. A private system I'm building for myself, the best way I can, to hold what I know and actually put it to use. The one I'm most excited about right now.",
+    highlight: true,
+  },
+  {
+    title: "Smart Apply",
+    tag: "AI · Collaboration",
+    status: "In discussion",
+    desc: "A tool I've started discussing with a collaborator. Millions of developers apply for jobs every day and get filtered out by AI before they ever reach a real interview. Smart Apply is built to close that gap and help devs get through. Early days. Stay tuned.",
+  },
+];
+
+/* ─── FAQ ───────────────────────────────────────────────────────────────── */
+const FAQS = [
+  { q: "Do you work remotely?", a: "Yes. I work remotely day to day, and I'm open to relocating if a company needs me on-site. I already work with teams in Austria, Switzerland and Germany." },
+  { q: "How do you usually work with teams?", a: "On contract, embedded in the team, either building hands-on as a full-stack engineer or leading as a tech lead. I take on a few teams at a time so each one gets real attention." },
+  { q: "What's your stack?", a: "React and Next.js, Vue and Nuxt, Node and Nest.js, PostgreSQL, TypeScript, Docker. I'm comfortable picking up your stack too. The principles carry over." },
+  { q: "Are you available right now?", a: "I'm open to both: a full-time role (remote, or relocating if it's the right fit) and a few select contract projects. The fastest way to find out if we're a fit is to book a short call." },
+  { q: "Do you lead teams or build hands-on?", a: "Both, every day. I write production code daily and I'm in the dailies, sprint planning, code reviews and workshops. I help QA when a ticket is being tested, setting it up and checking it through to merge and done. I keep an eye on hotfixes during releases, and work closely with DevOps." },
+  { q: "What languages do you work in?", a: "Albanian natively and English at a full professional level. Standups, docs, and client calls all run in English." },
+];
+
+/* ─── WRITING / NOTES (drafts — Edita to review & edit) ─────────────────── */
+const NOTES = [
+  {
+    title: "Migrating a legacy app with zero downtime",
+    date: "2026",
+    read: "4 min read",
+    excerpt: "Replacing the system underneath an app while people keep using it is one of those jobs where the only acceptable result is that nobody notices.",
+    body: [
+      "No downtime, no lost data, no “we'll be back in an hour” page. Just a modern stack where an old one used to be.",
+      "I didn't rewrite it from scratch. A full rewrite sounds clean, but it's where these projects go to die. You spend months rebuilding things nobody remembers needing, and you find out what you missed once it's already in production. So I started by reading the old code and the data, working out what was actually used and what was just sitting there.",
+      "Then I moved it over in pieces. The new stack went in front of the old one and took over one part at a time. For a while both were running together, and if something didn't look right I could send traffic back to the old path in seconds. No big switch-over day.",
+      "The data took the most care. You're not done when the new code runs. You're done when every record and every relation, including the strange ones someone entered years ago, lands in the new database exactly as it was. I kept checks running that compared old and new on every pass, and I didn't move a piece until the numbers lined up.",
+      "It went out in stages, with no downtime and nothing lost. The team got a codebase they could work in again, and the people using it never knew anything had changed.",
+    ],
+  },
+  {
+    title: "RBAC in practice: the roles people actually use",
+    date: "2026",
+    read: "3 min read",
+    excerpt: "Access control looks simple until you watch a real team use the thing you built.",
+    body: [
+      "On paper it's “admin” and “user.” In practice there's the person who does everything, the one who only opens a single screen, the contractor who should see one client and not the others, and the manager who wants to see all of it but shouldn't change a thing.",
+      "On the IP3 CRM, nobody asked me about permissions. But it's the part that decides whether people trust the system. The first time someone sees a number they shouldn't, you've lost them.",
+      "I built the roles around the actual jobs people do, not around an abstract list of permissions. Who creates, who approves, who only looks. A few clear roles that each match how a real person works, so anyone on the team can reason about who sees what.",
+      "I kept the checks on the server, next to the data. When permissions are spread through the UI, one of them is wrong and you won't find it until it matters. And the default is no: a new screen or field stays hidden until someone decides a role should have it. Opening access up later is easy. Taking it back after everyone has already seen everything is not.",
+    ],
+  },
+  {
+    title: "Using AI without letting the codebase slip",
+    date: "2026",
+    read: "3 min read",
+    excerpt: "I use AI a lot and I like working with it. But I read everything it gives me before it goes anywhere near the codebase.",
+    body: [
+      "A good model with a sloppy prompt will hand you code that works and is put together badly: components sitting where they don't belong, the same logic pasted in three places, no structure you'd want to maintain.",
+      "So I treat what AI writes like a pull request from someone fast but junior. It gets reviewed. The first thing I look at is structure: is this component going to be needed elsewhere, and if it is, should it be reusable now instead of duplicated later? Same with API calls, queries, and error handling, the things that quietly get rewritten in five slightly different ways if nobody stops to pull them into one.",
+      "That's the part I care about most. It's not whether AI can produce a feature. It can. The question is whether what comes out is something the team can build on: one reusable component, one shared query, one place errors are handled, instead of the same thing scattered around with small differences.",
+      "And the time AI actually saves me usually isn't a feature at all. It's the repetitive work around delivery: automations that move data between tools, routine checks, setup that used to eat a morning. I let it take that, I review what it does, and I keep the structure of the product something a person decided on.",
+    ],
+  },
 ];
 
 /* ─── CONTACT / IDENTITY CONSTANTS ──────────────────────────────────────── */
@@ -209,15 +350,19 @@ const downloadCV = () => {
 const STATS = [
   { n: 6, suffix: "+", label: "Years Experience" },
   { n: 20, suffix: "+", label: "Apps Delivered" },
-  { n: 4, suffix: "", label: "Countries" },
+  { n: 9, suffix: "+", label: "Countries" },
   { n: 80, suffix: "+", label: "Developers Trained" },
 ];
 
 const COMMANDS = [
   { id: "about", label: "Go to About", hint: "section", action: () => scrollToId("about") },
+  { id: "now", label: "Go to Currently Building", hint: "section", action: () => scrollToId("now") },
+  { id: "services", label: "Go to How I Help", hint: "section", action: () => scrollToId("services") },
   { id: "stack", label: "Go to Tech Stack", hint: "section", action: () => scrollToId("stack") },
   { id: "experience", label: "Go to Experience", hint: "section", action: () => scrollToId("experience") },
   { id: "projects", label: "Go to Projects", hint: "section", action: () => scrollToId("projects") },
+  { id: "writing", label: "Go to Writing", hint: "section", action: () => scrollToId("writing") },
+  { id: "faq", label: "Go to FAQ", hint: "section", action: () => scrollToId("faq") },
   { id: "contact", label: "Go to Contact", hint: "section", action: () => scrollToId("contact") },
   { id: "cv", label: "Download CV (PDF)", hint: "download", action: downloadCV },
   { id: "email", label: "Email Edita", hint: "link", action: () => { window.location.href = `mailto:${EMAIL}`; } },
@@ -282,7 +427,9 @@ function useInView(t = 0.1) {
   const ref = useRef(null);
   const [v, setV] = useState(false);
   useEffect(() => {
-    const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setV(true); }, { threshold: t });
+    // threshold 0 + rootMargin so it fires when a section's top enters view —
+    // a fixed threshold never triggers on sections taller than the viewport (mobile).
+    const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setV(true); }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
     if (ref.current) o.observe(ref.current);
     return () => o.disconnect();
   }, []);
@@ -493,7 +640,7 @@ function Nav({ onOpenPalette }) {
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Back to top" style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.1rem", letterSpacing: ".05em", color: C.textPrimary }}>EL<span style={{ color: C.cyan }}>.</span></button>
       <div style={{ display: "flex", gap: "clamp(1rem,3vw,2rem)", alignItems: "center" }}>
         <div className="nav-links" style={{ display: "flex", gap: "clamp(1rem,3vw,2rem)", alignItems: "center" }}>
-          {["About", "Stack", "Experience", "Projects", "Contact"].map((s) => (
+          {["About", "Now", "Services", "Experience", "Projects", "Writing", "Contact"].map((s) => (
             <button key={s} onClick={() => scrollToId(s.toLowerCase())}
               style={{ color: C.textMuted, background: "none", border: "none", fontFamily: "'DM Mono',monospace", fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", transition: "color .2s", cursor: "pointer" }}
               onMouseEnter={(e) => (e.target.style.color = C.cyan)}
@@ -559,7 +706,7 @@ function Hero({ ready }) {
         onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.green; e.currentTarget.style.color = C.green; }}
         onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.greenDim; e.currentTarget.style.color = C.textBody; }}>
         <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: C.green, boxShadow: `0 0 8px ${C.green}`, animation: reduced ? "none" : "glow 2s ease-in-out infinite" }} />
-        Open to select projects
+        Open to roles &amp; select projects
       </a>
 
       {/* Name */}
@@ -653,13 +800,22 @@ function About() {
             ))}
           </div>
 
+          <div style={{ marginBottom: "2rem" }}>
+            <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.green, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: "1rem" }}>Known on the team as</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
+              {KNOWN_AS.map((k, i) => (
+                <span key={k} style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontStyle: "italic", color: C.textPrimary, background: `${i % 2 === 0 ? C.cyan : C.green}0e`, border: `1px solid ${i % 2 === 0 ? C.cyan : C.green}33`, borderRadius: 999, padding: ".4rem .95rem" }}>&ldquo;{k}&rdquo;</span>
+              ))}
+            </div>
+          </div>
+
           <div className="edu-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.6rem", borderTop: `1px solid ${C.border}`, paddingTop: "1.6rem" }}>
             <div>
-              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textMuted, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".9rem" }}>Works with teams across</div>
+              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textMuted, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".9rem" }}>Clients &amp; teams across</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: ".45rem" }}>
                 {WORKS_ACROSS.map((w) => <Chip key={w} sm>{w}</Chip>)}
               </div>
-              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, marginTop: ".9rem", letterSpacing: ".04em" }}>Remote-first · on-site when it matters</div>
+              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, marginTop: ".9rem", letterSpacing: ".04em" }}>Remote · open to relocation</div>
             </div>
             <div>
               <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textMuted, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".9rem" }}>Languages</div>
@@ -708,7 +864,7 @@ function Stack() {
   const [ref, v] = useInView();
   return (
     <section id="stack" ref={ref} style={sec}>
-      <Label n="02" t="Tech Stack" />
+      <Label n="03" t="Tech Stack" />
       <H2>What I <Ac>Build With</Ac></H2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: "1.2rem", marginTop: "3.5rem" }}>
         {Object.entries(SKILLS).map(([cat, items], ci) => (
@@ -732,7 +888,7 @@ function Experience() {
   const e = EXPERIENCE[active];
   return (
     <section id="experience" ref={ref} style={sec}>
-      <Label n="03" t="Experience" />
+      <Label n="04" t="Experience" />
       <H2>Where I've <Ac>Delivered</Ac></H2>
       <div style={{ display: "grid", gridTemplateColumns: "min(240px, 100%) 1fr", gap: "1.5rem", marginTop: "3.5rem" }} className="exp-grid">
         <div className="exp-tabs" style={{ display: "flex", flexDirection: "column", gap: ".2rem" }}>
@@ -757,6 +913,161 @@ function Experience() {
             ))}
           </ul>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── CURRENTLY BUILDING / NOW ──────────────────────────────────────────── */
+function Now() {
+  const [ref, v] = useInView();
+  return (
+    <section id="now" ref={ref} style={sec}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", marginBottom: "1.4rem" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: ".6rem" }}>
+          <span aria-hidden="true" style={{ width: 9, height: 9, borderRadius: "50%", background: C.green, boxShadow: `0 0 10px ${C.green}`, animation: "glow 2s ease-in-out infinite" }} />
+          <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".7rem", color: C.green, letterSpacing: ".22em", textTransform: "uppercase" }}>Currently Building</span>
+        </div>
+        <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, letterSpacing: ".1em" }}>Updated {NOW_UPDATED}</span>
+      </div>
+      <H2>Things I'm <Ac>Building Now</Ac></H2>
+      <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".95rem", color: C.textBody, lineHeight: 1.7, maxWidth: 560, margin: "1.2rem 0 0" }}>
+        What I'm building right now, and what's coming next. I keep this updated as things move.
+      </p>
+      <div className="now-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: "1.2rem", marginTop: "2.5rem", alignItems: "start" }}>
+        {BUILDING.map((b, i) => (
+          <div key={b.title} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(24px)", transition: `all .5s ease ${i * 0.08}s`, background: C.bgCard, border: `1px solid ${b.highlight ? C.green + "55" : C.border}`, borderRadius: 4, padding: "1.7rem", position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${b.highlight ? C.green : C.cyan},transparent)` }} />
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: ".7rem", gap: ".5rem" }}>
+              <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: b.highlight ? C.green : C.cyan, letterSpacing: ".14em", textTransform: "uppercase" }}>{b.tag}</span>
+              <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".56rem", color: C.textDim, border: `1px solid ${C.border}`, padding: ".12rem .45rem", borderRadius: 2, letterSpacing: ".1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>{b.status}</span>
+            </div>
+            <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.12rem", fontWeight: 700, color: C.textPrimary, margin: "0 0 .5rem" }}>{b.title}</h3>
+            <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".88rem", color: C.textBody, lineHeight: 1.65, margin: 0 }}>{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─── HOW I HELP / HOW I WORK ───────────────────────────────────────────── */
+function Services() {
+  const [ref, v] = useInView();
+  return (
+    <section id="services" ref={ref} style={sec}>
+      <Label n="02" t="How I Help" />
+      <H2>What I <Ac>Do</Ac></H2>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.2rem", marginTop: "3.5rem" }}>
+        {SERVICES.map((s, i) => (
+          <div key={s.title} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(24px)", transition: `opacity .55s ease ${i * 0.1}s,transform .55s ease ${i * 0.1}s`, background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "1.9rem", position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${i % 2 === 0 ? C.cyan : C.green},transparent)` }} />
+            <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".7rem", color: i % 2 === 0 ? C.cyan : C.green, letterSpacing: ".12em" }}>{s.n}</div>
+            <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.15rem", fontWeight: 700, color: C.textPrimary, margin: ".5rem 0 .6rem" }}>{s.title}</h3>
+            <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", color: C.textBody, lineHeight: 1.65, margin: "0 0 1.1rem" }}>{s.desc}</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: ".35rem" }}>
+              {s.tags.map((t) => <Chip key={t} sm>{t}</Chip>)}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.cyan, letterSpacing: ".16em", textTransform: "uppercase", margin: "3.2rem 0 1.4rem" }}>How I work</div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: "1.4rem" }}>
+        {PROCESS.map((p, i) => (
+          <div key={p.title} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(20px)", transition: `all .5s ease ${i * 0.08}s`, paddingLeft: "1rem", borderLeft: `2px solid ${C.border}` }}>
+            <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.6rem", color: i === 3 ? C.green : C.cyan, lineHeight: 1 }}>{p.n}</div>
+            <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: ".98rem", color: C.textPrimary, margin: ".4rem 0 .3rem" }}>{p.title}</div>
+            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".84rem", color: C.textBody, lineHeight: 1.55 }}>{p.desc}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─── TEACHING & CREDENTIALS ────────────────────────────────────────────── */
+function Teaching() {
+  const [ref, v] = useInView(0.2);
+  return (
+    <section ref={ref} aria-label="Teaching and credentials" style={{ ...sec, paddingTop: "2rem", paddingBottom: "2rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "2rem", borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}`, padding: "2.6rem 0", alignItems: "center", opacity: v ? 1 : 0, transform: v ? "none" : "translateY(18px)", transition: "all .6s ease" }}>
+        <div>
+          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(2rem,5vw,3rem)", color: C.green, lineHeight: 1 }}>80+ trained</div>
+          <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.65, margin: ".8rem 0 0", maxWidth: 440 }}>
+            I've taught full-stack development to 80+ people (HTML, CSS, JavaScript, Node, React, APIs and databases) and mentored juniors into stronger engineers. Leading people is part of how I work, not a side note.
+          </p>
+        </div>
+        <div>
+          <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textMuted, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".9rem" }}>Courses & training</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: ".45rem" }}>
+            {COURSES.map((c) => <Chip key={c} sm>{c}</Chip>)}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── WRITING / NOTES ───────────────────────────────────────────────────── */
+function NoteCard({ note, i, v }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(24px)", transition: `all .5s ease ${i * 0.08}s`, background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "1.7rem", position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${i % 2 === 0 ? C.cyan : C.green},transparent)` }} />
+      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textMuted, letterSpacing: ".08em" }}>{note.date} · {note.read}</div>
+      <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.12rem", fontWeight: 700, color: C.textPrimary, margin: ".5rem 0 .6rem" }}>{note.title}</h3>
+      <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", color: C.textBody, lineHeight: 1.7, margin: 0 }}>{note.excerpt}</p>
+      {open && note.body.map((para, k) => (
+        <p key={k} style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", color: C.textBody, lineHeight: 1.75, margin: "1rem 0 0" }}>{para}</p>
+      ))}
+      <button onClick={() => setOpen((o) => !o)} aria-expanded={open}
+        style={{ marginTop: "1.1rem", background: "none", border: "none", cursor: "pointer", fontFamily: "'DM Mono',monospace", fontSize: ".7rem", color: C.cyan, letterSpacing: ".08em", textTransform: "uppercase", padding: 0 }}>
+        {open ? "Close ↑" : "Read ↓"}
+      </button>
+    </div>
+  );
+}
+
+function Writing() {
+  const [ref, v] = useInView();
+  return (
+    <section id="writing" ref={ref} style={sec}>
+      <Label n="07" t="Writing" />
+      <H2>Notes on the <Ac>Craft</Ac></H2>
+      <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".95rem", color: C.textBody, lineHeight: 1.7, maxWidth: 560, margin: "1.2rem 0 0" }}>
+        Short pieces on how I actually build. The decisions behind the work, not the buzzwords.
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.2rem", marginTop: "2.5rem", alignItems: "start" }}>
+        {NOTES.map((note, i) => <NoteCard key={note.title} note={note} i={i} v={v} />)}
+      </div>
+    </section>
+  );
+}
+
+/* ─── FAQ ───────────────────────────────────────────────────────────────── */
+function FaqItem({ item, i, v }) {
+  const [open, setOpen] = useState(i === 0);
+  return (
+    <div style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(16px)", transition: `all .45s ease ${i * 0.06}s`, borderBottom: `1px solid ${C.border}` }}>
+      <button onClick={() => setOpen((o) => !o)} aria-expanded={open}
+        style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", background: "none", border: "none", cursor: "pointer", padding: "1.2rem 0", textAlign: "left" }}>
+        <span style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1rem", color: C.textPrimary }}>{item.q}</span>
+        <span aria-hidden="true" style={{ color: C.cyan, fontFamily: "'DM Mono',monospace", fontSize: "1.2rem", flexShrink: 0 }}>{open ? "−" : "+"}</span>
+      </button>
+      {open && <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.7, margin: "0 0 1.3rem", maxWidth: 640 }}>{item.a}</p>}
+    </div>
+  );
+}
+
+function Faq() {
+  const [ref, v] = useInView();
+  return (
+    <section id="faq" ref={ref} style={sec}>
+      <Label n="08" t="FAQ" />
+      <H2>Good to <Ac>Know</Ac></H2>
+      <div style={{ marginTop: "2.5rem", borderTop: `1px solid ${C.border}` }}>
+        {FAQS.map((item, i) => <FaqItem key={item.q} item={item} i={i} v={v} />)}
       </div>
     </section>
   );
@@ -806,12 +1117,32 @@ function CollabVisual() {
   );
 }
 
+function MigrationVisual() {
+  return (
+    <div style={visualWrap}>
+      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".6rem", color: C.textMuted, letterSpacing: ".16em", textTransform: "uppercase" }}>Phased migration</div>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+        <div style={{ ...nodeStyle(C.textDim), opacity: 0.7, textDecoration: "line-through", color: C.textMuted }}>Legacy stack</div>
+        <span aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.5rem", color: C.cyan }}>→</span>
+        <div style={{ ...nodeStyle(C.green), fontWeight: 700, color: C.green }}>Modern stack</div>
+      </div>
+      <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap", justifyContent: "center", maxWidth: 300 }}>
+        {["Audit", "Slice", "Verify", "Cut over"].map((s, i) => (
+          <div key={s} style={nodeStyle(i === 3 ? C.green : C.cyanDim)}>{s}</div>
+        ))}
+      </div>
+      <div style={{ ...nodeStyle(C.green), fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: 0, color: C.green }}>Zero downtime</div>
+    </div>
+  );
+}
+
 function CaseVisual({ cs }) {
   if (cs.img) {
     return <img src={cs.img} alt={`${cs.title} — screenshot`} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />;
   }
   if (cs.visual === "ai") return <AIVisual />;
   if (cs.visual === "collab") return <CollabVisual />;
+  if (cs.visual === "migration") return <MigrationVisual />;
   return null;
 }
 
@@ -916,7 +1247,7 @@ function Projects() {
 
   return (
     <section id="projects" ref={ref} style={sec}>
-      <Label n="04" t="Projects" />
+      <Label n="05" t="Projects" />
       <H2>Things I've <Ac>Delivered</Ac></H2>
 
       {/* Featured case studies */}
@@ -940,7 +1271,7 @@ function Projects() {
       {tab === "featured" && (
         <div style={{ marginTop: "1.3rem", padding: ".7rem 1.1rem", background: `${C.cyan}06`, border: `1px solid ${C.border}`, borderLeft: `3px solid ${C.cyan}`, borderRadius: 2 }}>
           <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".7rem", color: C.textBody }}>
-            <span style={{ color: C.cyan }}>note — </span>
+            <span style={{ color: C.cyan }}>note: </span>
             Client names withheld for confidentiality. Work delivered during employment at Ringana, the eksperts, StarLabs, and MakerMinds GmbH.
           </span>
         </div>
@@ -958,7 +1289,7 @@ function Projects() {
       {tab === "freelance" && (
         <div style={{ marginTop: "1rem", padding: ".7rem 1.1rem", background: `${C.green}06`, border: `1px solid ${C.border}`, borderLeft: `3px solid ${C.green}`, borderRadius: 2 }}>
           <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".7rem", color: C.textBody }}>
-            <span style={{ color: C.green }}>note — </span>
+            <span style={{ color: C.green }}>note: </span>
             Independent freelance work. Unaffiliated with any employer.
           </span>
         </div>
@@ -1085,7 +1416,7 @@ const TESTIMONIALS = [
     name: "G.H.",
     role: "Junior Web Developer · MakerMinds Graduate",
     text: "Dua të shpreh një falënderim të ngrohtë për kohën dhe përkushtimin gjatë trajnimit tim. Përvojën e konsideroj jashtëzakonisht të vlefshme. Ndihma dhe mbështetja gjatë kësaj periudhe ka qenë e jashtëzakonshme. Me bindje, do t'i rekomandoja këto trajnime të gjithë atyre që duan të fillojnë karrierë në web development.",
-    en: "I want to express warm thanks for the time and dedication during my training. I consider the experience extremely valuable — the help and support throughout was exceptional. I'd confidently recommend this training to anyone who wants to start a career in web development.",
+    en: "I want to express warm thanks for the time and dedication during my training. I consider the experience extremely valuable, and the help and support throughout was exceptional. I'd confidently recommend this training to anyone who wants to start a career in web development.",
     stars: 5,
     source: "MakerMinds · March 2024",
   },
@@ -1100,7 +1431,7 @@ const TESTIMONIALS = [
   {
     name: "S.H.",
     role: "Engineer · Ringana, Austria",
-    text: "You are the best literally! It's the fastest delivery I ever did I think haha — thank you so much!",
+    text: "You are the best literally! It's the fastest delivery I ever did I think haha, thank you so much!",
     en: null,
     stars: 5,
     source: "Microsoft Teams · Ringana · April 2026",
@@ -1114,7 +1445,7 @@ function Testimonials() {
 
   return (
     <section id="testimonials" ref={ref} style={sec}>
-      <Label n="05" t="Testimonials" />
+      <Label n="06" t="Testimonials" />
       <H2>What People <Ac>Say</Ac></H2>
 
       <div
@@ -1132,7 +1463,7 @@ function Testimonials() {
         }}
       >
         <div>
-          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "2.5rem", position: "relative", overflow: "hidden", boxShadow: `0 0 40px ${C.cyan}08` }}>
+          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "clamp(1.4rem,5vw,2.5rem)", position: "relative", overflow: "hidden", boxShadow: `0 0 40px ${C.cyan}08` }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.cyan},${C.green})` }} />
             <div aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontSize: "5rem", lineHeight: 0.8, color: `${C.cyan}25`, fontWeight: 800, marginBottom: "1rem", userSelect: "none" }}>&ldquo;</div>
             <div style={{ display: "flex", gap: 4, marginBottom: "1.2rem" }} aria-label={`${t.stars} out of 5 stars`}>
@@ -1178,7 +1509,7 @@ function Testimonials() {
           <div style={{ padding: "1.2rem" }}>
             <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.green, letterSpacing: ".15em", textTransform: "uppercase", marginBottom: ".4rem" }}>Live Training Session</div>
             <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: ".9rem", color: C.textPrimary, marginBottom: ".3rem" }}>Edita Latifi · Trainer MMKS Web</div>
-            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".82rem", color: C.textMuted }}>CSS, HTML &amp; JavaScript — MakerMinds, Kosovo.</div>
+            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".82rem", color: C.textMuted }}>CSS, HTML &amp; JavaScript at MakerMinds, Kosovo.</div>
           </div>
         </div>
       </div>
@@ -1253,10 +1584,10 @@ function Contact() {
   const [ref, v] = useInView();
   return (
     <section id="contact" ref={ref} style={{ ...sec, paddingBottom: "8rem" }}>
-      <Label n="06" t="Contact" />
+      <Label n="09" t="Contact" />
       <H2>Let's <Ac>Build Something</Ac></H2>
       <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "1rem", color: C.textBody, lineHeight: 1.7, maxWidth: 580, margin: "1.4rem 0 2.4rem" }}>
-        I partner with teams who care about doing it properly — and I'm selective about where I put my energy.
+        I partner with teams who care about doing it properly, and I'm selective about where I put my energy.
         If you're building something that deserves to be owned end to end, tell me about it.
         <br />
         <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".8rem", color: C.textMuted }}>Based in Pristina, Kosovo · Working with teams worldwide</span>
@@ -1373,10 +1704,15 @@ export default function App() {
         <Hero ready={ready} />
         <About />
         <Stats />
+        <Now />
+        <Services />
         <Stack />
         <Experience />
+        <Teaching />
         <Projects />
         <Testimonials />
+        <Writing />
+        <Faq />
         <Contact />
       </main>
       <Footer />
