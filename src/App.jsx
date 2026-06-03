@@ -874,12 +874,14 @@ function Stats() {
 /* ─── STACK ─────────────────────────────────────────────────────────────── */
 function Stack() {
   const [ref, v] = useInView();
+  const tech = Object.entries(SKILLS).filter(([cat]) => cat !== "Leadership");
+  const leadership = SKILLS.Leadership || [];
   return (
     <section id="stack" ref={ref} style={sec}>
       <Label n="03" t="Tech Stack" />
       <H2>What I <Ac>Build With</Ac></H2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: "1.2rem", marginTop: "3.5rem" }}>
-        {Object.entries(SKILLS).map(([cat, items], ci) => (
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "1.2rem", marginTop: "3.5rem", alignItems: "start" }}>
+        {tech.map(([cat, items], ci) => (
           <div key={cat} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(24px)", transition: `opacity .55s ease ${ci * 0.1}s,transform .55s ease ${ci * 0.1}s`, background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 4, padding: "1.7rem", position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${ci % 2 === 0 ? C.cyan : C.green},transparent)` }} />
             <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".68rem", color: ci % 2 === 0 ? C.cyan : C.green, letterSpacing: ".18em", textTransform: "uppercase", marginBottom: "1rem", fontWeight: 500 }}>{cat}</div>
@@ -889,6 +891,19 @@ function Stack() {
           </div>
         ))}
       </div>
+
+      {leadership.length > 0 && (
+        <div style={{ marginTop: "1.2rem", background: C.bgCard, border: `1px solid ${C.greenDim}`, borderRadius: 4, padding: "1.7rem", position: "relative", overflow: "hidden", opacity: v ? 1 : 0, transform: v ? "none" : "translateY(24px)", transition: "all .55s ease .35s" }}>
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.green},${C.cyan})` }} />
+          <div style={{ display: "flex", alignItems: "baseline", gap: ".8rem", flexWrap: "wrap", marginBottom: "1rem" }}>
+            <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".68rem", color: C.green, letterSpacing: ".18em", textTransform: "uppercase", fontWeight: 500 }}>Leadership</div>
+            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".82rem", color: C.textMuted }}>How I run a team, not just a codebase.</div>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: ".45rem" }}>
+            {leadership.map((s) => <Chip key={s}>{s}</Chip>)}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
