@@ -448,6 +448,18 @@ function usePrefersReducedMotion() {
   return reduced;
 }
 
+function useIsMobile() {
+  const q = "(max-width: 820px)";
+  const [m, setM] = useState(() => typeof window !== "undefined" && window.matchMedia(q).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(q);
+    const h = (e) => setM(e.matches);
+    mq.addEventListener?.("change", h);
+    return () => mq.removeEventListener?.("change", h);
+  }, []);
+  return m;
+}
+
 function useCountUp(target, run, duration = 1400) {
   const reduced = usePrefersReducedMotion();
   const [n, setN] = useState(0);
@@ -1157,7 +1169,9 @@ function CaseRow({ label, text }) {
 
 function CaseStudy({ cs, i }) {
   const [ref, v] = useInView(0.12);
-  const [open, setOpen] = useState(i === 0);
+  const isMobile = useIsMobile();
+  // On desktop the first case study opens by default; on mobile nothing auto-opens.
+  const [open, setOpen] = useState(() => i === 0 && !(typeof window !== "undefined" && window.matchMedia("(max-width: 820px)").matches));
   const imageLeft = i % 2 === 0;
   return (
     <div ref={ref} style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 6, overflow: "hidden", position: "relative", opacity: v ? 1 : 0, transform: v ? "none" : "translateY(28px)", transition: `all .6s ease ${i * 0.12}s`, marginBottom: "1.4rem" }}>
@@ -1173,7 +1187,9 @@ function CaseStudy({ cs, i }) {
           <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.cyan, letterSpacing: ".16em", textTransform: "uppercase", marginBottom: ".7rem" }}>Featured Case Study · {cs.category}</div>
           <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.45rem", fontWeight: 800, color: C.textPrimary, margin: "0 0 .25rem", letterSpacing: "-.01em" }}>{cs.title}</h3>
           <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.textMuted, marginBottom: "1.1rem" }}>{cs.client}</div>
-          <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.7, margin: "0 0 1.2rem" }}>{cs.context}</p>
+          {(!isMobile || open) && (
+            <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".92rem", color: C.textBody, lineHeight: 1.7, margin: "0 0 1.2rem" }}>{cs.context}</p>
+          )}
 
           {cs.metrics && (
             <div style={{ display: "flex", flexWrap: "wrap", gap: ".6rem", margin: "0 0 1.3rem" }}>
