@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edita-latifi-portfolio.vercel.app/sitemap.xml
+Sitemap: https://www.edita.dev/sitemap.xml
