@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 /* ─── PALETTE — v1 colors, tuned for WCAG-AA contrast ──────────────────── */
 const C = {
@@ -1259,6 +1261,8 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
