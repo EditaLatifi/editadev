@@ -270,10 +270,10 @@ const BUILDING = [
     highlight: true,
   },
   {
-    title: "Smart Apply",
+    title: "RoleAI",
     tag: "AI · Collaboration",
     status: "In discussion",
-    desc: "A tool I've started discussing with a collaborator. Millions of developers apply for jobs every day and get filtered out by AI before they ever reach a real interview. Smart Apply is built to close that gap and help devs get through. Early days. Stay tuned.",
+    desc: "An intelligent job-application platform for developers. Millions apply every day and get filtered out by an ATS before a human ever sees them. RoleAI reads each job post, tailors your CV to get past the ATS, and applies only where you have a real shot, instead of firing off blind applications. A collaboration, and one I'm excited about. Stay tuned.",
   },
 ];
 
