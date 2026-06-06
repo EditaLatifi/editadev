@@ -263,10 +263,10 @@ const BUILDING = [
     desc: "An n8n automation for the processes that eat my time. I hand the repetitive parts to it and stay more flexible for the work that actually needs me.",
   },
   {
-    title: "Second Brain for my laptop",
-    tag: "AI · Personal",
+    title: "ORBIT · AgentOS",
+    tag: "AI · Product",
     status: "In progress",
-    desc: "My own second brain. A private system I'm building for myself, the best way I can, to hold what I know and actually put it to use. The one I'm most excited about right now.",
+    desc: "An AI operating system for business. One layer that sits on top of the tools a company already uses, connects them, learns from their data, and runs the work on its own: named AI operators, each owning a department, all coordinated from a single workspace. The most ambitious thing I'm building.",
     highlight: true,
   },
   {
