@@ -26,6 +26,7 @@ const C = {
 const SKILLS = {
   Frontend: ["Next.js", "Nuxt.js", "React.js", "Vue.js", "Angular.js", "TypeScript", "JavaScript", "Tailwind CSS", "Alpine.js"],
   Backend: ["Node.js", "Nest.js", "Express.js", "PHP", "Laravel", "Symfony", "Python", "Django"],
+  "AI & Agents": ["Claude", "Anthropic API", "AI / LLMs", "AI Agents", "Subagents", "Cursor", "API Integrations", "Prompt Engineering", "n8n"],
   "Data & APIs": ["PostgreSQL", "MySQL", "MongoDB", "REST APIs", "Prisma", "Postman"],
   "Infra & Tools": ["Docker", "Git", "CI/CD", "Bitbucket", "WordPress", "Prismic CMS", "Typo3"],
   Leadership: ["Tech Team Lead", "Scrum Master", "Code Reviews", "Sprint Planning", "Mentoring", "AI Integration", "AI Automation", "Agile / Scrum"],
@@ -192,7 +193,7 @@ const PROJECTS = [
 
 /* ─── ABOUT / LANGUAGES ─────────────────────────────────────────────────── */
 const ABOUT_PARAS = [
-  "I'm Edita. A full-stack engineer and tech lead based in Pristina, Kosovo, working with teams across Austria, Switzerland, and Germany.",
+  "I'm Edita. An independent full stack engineer and IT consultant based in Podujevë, Kosovo, working with B2B clients across Kosovo, Austria, Malta, Africa, Switzerland, and Prague (Czechia).",
   "I write code every day, and I'm close to the rest of the team through dailies, sprint planning, code reviews and workshops. I work with designers, product owners, QA and DevOps, help test tickets before they're merged, and keep an eye on hotfixes through releases. Most of it is remote, and I'm open to relocating if a company needs me on-site.",
   "I work hard, and I do it honestly. I take a project from the first line of code to the day it goes live, and I own it the whole way. I care where I put that work, so I'm picky about the teams I say yes to.",
 ];
@@ -348,7 +349,7 @@ const downloadCV = () => {
 };
 
 const STATS = [
-  { n: 6, suffix: "+", label: "Years Experience" },
+  { n: 8, suffix: "+", label: "Years Experience" },
   { n: 20, suffix: "+", label: "Apps Delivered" },
   { n: 9, suffix: "+", label: "Countries" },
   { n: 80, suffix: "+", label: "Developers Trained" },
@@ -580,9 +581,9 @@ function ParticleCanvas({ explode, onExplodeDone, reduced }) {
 /* ─── TERMINAL (intro gate — skippable) ─────────────────────────────────── */
 const BOOT = [
   { t: "INITIALISING...", d: 0, c: C.textMuted },
-  { t: "LOADING PROFILE: EDITA_LATIFI.DAT", d: 450, c: C.cyan },
+  { t: "LOADING PROFILE: EDITA_SHEQIRI.DAT", d: 450, c: C.cyan },
   { t: "STACK: FULL STACK + TECH LEAD · VERIFIED", d: 950, c: C.green },
-  { t: "RECORD: 6+ YEARS · 4 COUNTRIES · 20+ APPS", d: 1450, c: C.green },
+  { t: "RECORD: 8+ YEARS · 9+ COUNTRIES · 20+ APPS", d: 1450, c: C.green },
   { t: "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100%", d: 2000, c: C.cyan },
   { t: "READY.", d: 2500, c: C.textPrimary },
 ];
@@ -649,7 +650,7 @@ function Nav({ onOpenPalette }) {
   }, []);
   return (
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 30, height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 clamp(1rem,5vw,5rem)", background: scrolled ? `${C.bg}f0` : "transparent", backdropFilter: scrolled ? "blur(20px)" : "none", borderBottom: scrolled ? `1px solid ${C.border}` : "none", transition: "all .4s" }}>
-      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Back to top" style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.1rem", letterSpacing: ".05em", color: C.textPrimary }}>EL<span style={{ color: C.cyan }}>.</span></button>
+      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Back to top" style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.1rem", letterSpacing: ".05em", color: C.textPrimary }}>ES<span style={{ color: C.cyan }}>.</span></button>
       <div style={{ display: "flex", gap: "clamp(1rem,3vw,2rem)", alignItems: "center" }}>
         <div className="nav-links" style={{ display: "flex", gap: "clamp(1rem,3vw,2rem)", alignItems: "center" }}>
           {["About", "Now", "Services", "Experience", "Projects", "Writing", "Contact"].map((s) => (
@@ -718,25 +719,28 @@ function Hero({ ready }) {
         onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.green; e.currentTarget.style.color = C.green; }}
         onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.greenDim; e.currentTarget.style.color = C.textBody; }}>
         <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: C.green, boxShadow: `0 0 8px ${C.green}`, animation: reduced ? "none" : "glow 2s ease-in-out infinite" }} />
-        Open to roles &amp; select projects
+        Available for B2B projects
       </a>
 
       {/* Name */}
       <div style={{ position: "relative", marginBottom: "2rem", opacity: vis ? 1 : 0, transform: vis ? "none" : "scale(.9)", transition: "all .9s cubic-bezier(.16,1,.3,1) .05s" }}>
-        <h1 aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(4rem,13vw,11rem)", lineHeight: 0.88, letterSpacing: "-.03em", WebkitTextStroke: `1px ${C.cyan}1a`, color: "transparent", position: "absolute", inset: 0, transform: "translate(calc(var(--mx) * 0.65px), calc(var(--my) * 0.65px))", transition: "transform .1s linear", userSelect: "none", whiteSpace: "nowrap" }}>EDITA<br />LATIFI</h1>
-        <h1 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(4rem,13vw,11rem)", lineHeight: 0.88, letterSpacing: "-.03em", margin: 0, transform: "translate(calc(var(--mx) * 0.2px), calc(var(--my) * 0.2px))", transition: "transform .12s linear", position: "relative", zIndex: 1, whiteSpace: "nowrap" }}>
-          <span style={{ color: C.textPrimary }}>EDITA</span><br />
-          <span style={{ WebkitTextStroke: `2px ${C.cyan}`, color: "transparent" }}>LATIFI</span>
+        <h1 aria-hidden="true" style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, letterSpacing: "-.03em", WebkitTextStroke: `1px ${C.cyan}1a`, color: "transparent", position: "absolute", inset: 0, margin: 0, transform: "translate(calc(var(--mx) * 0.65px), calc(var(--my) * 0.65px))", transition: "transform .1s linear", userSelect: "none", whiteSpace: "nowrap" }}>
+          <span style={{ display: "block", fontSize: "clamp(4rem,13vw,11rem)", lineHeight: 0.88 }}>EDITA</span>
+          <span style={{ display: "block", fontSize: "clamp(1.5rem,5.5vw,4.2rem)", lineHeight: 1 }}>SHEQIRI (LATIFI)</span>
+        </h1>
+        <h1 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, letterSpacing: "-.03em", margin: 0, transform: "translate(calc(var(--mx) * 0.2px), calc(var(--my) * 0.2px))", transition: "transform .12s linear", position: "relative", zIndex: 1, whiteSpace: "nowrap" }}>
+          <span style={{ display: "block", fontSize: "clamp(4rem,13vw,11rem)", lineHeight: 0.88, color: C.textPrimary }}>EDITA</span>
+          <span style={{ display: "block", fontSize: "clamp(1.5rem,5.5vw,4.2rem)", lineHeight: 1, WebkitTextStroke: `2px ${C.cyan}`, color: "transparent" }}>SHEQIRI (LATIFI)</span>
         </h1>
       </div>
 
       {/* Role */}
       <div style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(16px)", transition: "all .8s ease .3s", marginBottom: "1.6rem" }}>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: "clamp(.8rem,1.6vw,1rem)", color: C.textBody, letterSpacing: ".08em", lineHeight: 1.9 }}>
-          Full Stack Engineer &amp; Tech Team Lead
+          Independent Full Stack Engineer &amp; IT Consulting
         </div>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: "clamp(.72rem,1.3vw,.88rem)", color: C.textMuted, letterSpacing: ".06em" }}>
-          6+ years &nbsp;·&nbsp; Austria · Switzerland · Germany · Kosovo
+          8+ years &nbsp;·&nbsp; B2B clients across Kosovo · Austria · Switzerland · Malta · Africa
         </div>
       </div>
 
@@ -787,11 +791,11 @@ function About() {
         <div style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: 6, overflow: "hidden", border: `1px solid ${C.border}`, background: `linear-gradient(135deg, ${C.cyan}12, ${C.green}08)` }}>
           <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.cyan},${C.green})`, zIndex: 2 }} />
           {imgOk ? (
-            <img src="/edita.jpg?v=2" alt="Edita Latifi — Full Stack Engineer & Tech Lead" loading="lazy" onError={() => setImgOk(false)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 18%" }} />
+            <img src="/edita.jpg?v=2" alt="Edita Sheqiri (Latifi) — Independent Full Stack Engineer & IT Consulting" loading="lazy" onError={() => setImgOk(false)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 18%" }} />
           ) : (
             <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".6rem" }}>
-              <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "4rem", color: C.textPrimary, letterSpacing: "-.03em" }}>EL<span style={{ color: C.cyan }}>.</span></div>
-              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, letterSpacing: ".18em", textTransform: "uppercase" }}>Pristina, Kosovo</div>
+              <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "4rem", color: C.textPrimary, letterSpacing: "-.03em" }}>ES<span style={{ color: C.cyan }}>.</span></div>
+              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, letterSpacing: ".18em", textTransform: "uppercase" }}>Podujevë, Kosovo</div>
             </div>
           )}
         </div>
@@ -1468,8 +1472,8 @@ const TESTIMONIALS = [
   {
     name: "G.U.",
     role: "Web Developer · MakerMinds Graduate",
-    text: "Trajnerja Edita Latifi nuk ka hezituar të ndajë njohuritë dhe eksperiencën e saj, duke ofruar këshilla të vlefshme gjatë çdo faze të trajnimit. Përvoja ka përmirësuar jo vetëm njohuritë e mia teknike, por edhe aftësitë në menaxhimin e projekteve dhe bashkëpunimin në ekip.",
-    en: "Trainer Edita Latifi never hesitated to share her knowledge and experience, offering valuable advice at every stage of the training. It improved not only my technical knowledge but also my project-management and teamwork skills.",
+    text: "Trajnerja Edita Sheqiri (Latifi) nuk ka hezituar të ndajë njohuritë dhe eksperiencën e saj, duke ofruar këshilla të vlefshme gjatë çdo faze të trajnimit. Përvoja ka përmirësuar jo vetëm njohuritë e mia teknike, por edhe aftësitë në menaxhimin e projekteve dhe bashkëpunimin në ekip.",
+    en: "Trainer Edita Sheqiri (Latifi) never hesitated to share her knowledge and experience, offering valuable advice at every stage of the training. It improved not only my technical knowledge but also my project-management and teamwork skills.",
     stars: 5,
     source: "MakerMinds · January 2024",
   },
@@ -1571,7 +1575,7 @@ function Testimonials() {
           </div>
           <div style={{ padding: "1.2rem" }}>
             <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.green, letterSpacing: ".15em", textTransform: "uppercase", marginBottom: ".4rem" }}>Live Training Session</div>
-            <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: ".9rem", color: C.textPrimary, marginBottom: ".3rem" }}>Edita Latifi · Trainer MMKS Web</div>
+            <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: ".9rem", color: C.textPrimary, marginBottom: ".3rem" }}>Edita Sheqiri (Latifi) · Trainer MMKS Web</div>
             <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".82rem", color: C.textMuted }}>CSS, HTML &amp; JavaScript at MakerMinds, Kosovo.</div>
           </div>
         </div>
@@ -1653,7 +1657,7 @@ function Contact() {
         I partner with teams who care about doing it properly, and I'm selective about where I put my energy.
         If you're building something that deserves to be owned end to end, tell me about it.
         <br />
-        <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".8rem", color: C.textMuted }}>Based in Pristina, Kosovo · Working with teams worldwide</span>
+        <span style={{ fontFamily: "'DM Mono',monospace", fontSize: ".8rem", color: C.textMuted }}>Based in Podujevë, Kosovo · Working with teams worldwide</span>
       </p>
 
       <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginBottom: "3rem", opacity: v ? 1 : 0, transform: v ? "none" : "translateY(18px)", transition: "all .6s ease" }}>
@@ -1697,7 +1701,7 @@ function Footer() {
   return (
     <footer style={{ borderTop: `1px solid ${C.border}`, padding: "2.4rem clamp(1.5rem,6vw,6rem)", position: "relative", zIndex: 1, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
       <div>
-        <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", color: C.textPrimary }}>EDITA LATIFI<span style={{ color: C.cyan }}>.</span></div>
+        <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", color: C.textPrimary }}>EDITA SHEQIRI<span style={{ color: C.cyan }}>.</span></div>
         <a href={`mailto:${EMAIL}`} style={{ fontFamily: "'DM Mono',monospace", fontSize: ".68rem", color: C.textMuted, letterSpacing: ".04em", textDecoration: "none", transition: "color .2s" }}
           onMouseEnter={(e) => (e.currentTarget.style.color = C.cyan)}
           onMouseLeave={(e) => (e.currentTarget.style.color = C.textMuted)}
@@ -1713,10 +1717,10 @@ function Footer() {
       </div>
       <div style={{ textAlign: "right" }}>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".66rem", color: C.textMuted, letterSpacing: ".06em" }}>
-          Full Stack Engineer · Full Stack Entwicklerin · Développeuse Full Stack
+          Independent Full Stack Engineer &amp; IT Consultant
         </div>
         <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".62rem", color: C.textDim, letterSpacing: ".06em", marginTop: 4 }}>
-          Tech Team Lead · Frontend &amp; Backend · React · Node · TypeScript · © 2026 Edita Latifi
+          IT Consulting · Frontend &amp; Backend · React · Node · TypeScript · © 2026 Edita Sheqiri (Latifi)
         </div>
       </div>
     </footer>

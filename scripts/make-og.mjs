@@ -32,10 +32,11 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .photo { position:absolute; top:0; right:0; width:430px; height:630px; object-fit:cover; object-position:center 12%; }
   .photo-fade { position:absolute; top:0; right:0; width:560px; height:630px;
     background:linear-gradient(90deg,#030712 0%, #030712 18%, transparent 60%); z-index:2; }
-  .content { position:absolute; inset:0; z-index:4; padding:74px 80px; display:flex; flex-direction:column; justify-content:center; }
-  .kicker { font-family:'DM Mono',monospace; font-size:21px; letter-spacing:.32em; text-transform:uppercase; color:#00d4ff; margin-bottom:24px; }
-  h1 { font-weight:800; font-size:118px; line-height:.9; letter-spacing:-.03em; }
+  .content { position:absolute; inset:0; z-index:4; padding:74px 80px; display:flex; flex-direction:column; justify-content:center; max-width:720px; }
+  .kicker { font-family:'DM Mono',monospace; font-size:20px; letter-spacing:.2em; text-transform:uppercase; color:#00d4ff; margin-bottom:24px; }
+  h1 { font-weight:800; font-size:110px; line-height:.9; letter-spacing:-.03em; }
   h1 .stroke { -webkit-text-stroke:3px #00d4ff; color:transparent; }
+  h1 .surname { display:block; font-size:58px; }
   .role { font-family:'DM Mono',monospace; font-size:27px; color:#c8d8e8; letter-spacing:.03em; margin-top:32px; max-width:640px; }
   .stats { display:flex; gap:42px; margin-top:46px; }
   .stat .n { font-weight:800; font-size:44px; color:#00ff88; line-height:1; }
@@ -47,13 +48,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="grid"></div>
   ${photo ? `<img class="photo" src="${photo}" /><div class="photo-fade"></div>` : ""}
   <div class="content">
-    <div class="kicker">Full Stack Engineer &middot; Tech Team Lead</div>
-    <h1>EDITA<br><span class="stroke">LATIFI</span></h1>
-    <div class="role">6+ years &middot; Austria &middot; Switzerland &middot; Germany &middot; Kosovo</div>
+    <div class="kicker">Independent Full Stack Engineer &middot; IT Consulting</div>
+    <h1>EDITA<span class="stroke surname">SHEQIRI (LATIFI)</span></h1>
+    <div class="role">8+ years &middot; B2B clients across Kosovo &middot; Austria &middot; Switzerland &middot; Malta &middot; Africa</div>
     <div class="stats">
-      <div class="stat"><div class="n">6+</div><div class="l">Years</div></div>
+      <div class="stat"><div class="n">8+</div><div class="l">Years</div></div>
       <div class="stat"><div class="n">20+</div><div class="l">Apps Delivered</div></div>
-      <div class="stat"><div class="n">4</div><div class="l">Countries</div></div>
+      <div class="stat"><div class="n">9+</div><div class="l">Countries</div></div>
       <div class="stat"><div class="n">80+</div><div class="l">Devs Trained</div></div>
     </div>
   </div>
