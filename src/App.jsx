@@ -280,7 +280,7 @@ const BUILDING = [
 
 /* ─── FAQ ───────────────────────────────────────────────────────────────── */
 const FAQS = [
-  { q: "Do you work remotely?", a: "Yes. I work remotely day to day, and I'm open to relocating if a company needs me on-site. I already work with teams in Austria, Switzerland and Germany." },
+  { q: "Do you work remotely?", a: "Yes. I work remotely day to day, and I'm open to relocating if a client needs me on-site. I already work with B2B clients across Kosovo, Austria, Switzerland, Malta, Africa, and Czechia." },
   { q: "How do you usually work with teams?", a: "On contract, embedded in the team, either building hands-on as a full-stack engineer or leading as a tech lead. I take on a few teams at a time so each one gets real attention." },
   { q: "What's your stack?", a: "React and Next.js, Vue and Nuxt, Node and Nest.js, PostgreSQL, TypeScript, Docker. I'm comfortable picking up your stack too. The principles carry over." },
   { q: "Are you available right now?", a: "I'm open to both: a full-time role (remote, or relocating if it's the right fit) and a few select contract projects. The fastest way to find out if we're a fit is to book a short call." },
@@ -1701,7 +1701,7 @@ function Footer() {
   return (
     <footer style={{ borderTop: `1px solid ${C.border}`, padding: "2.4rem clamp(1.5rem,6vw,6rem)", position: "relative", zIndex: 1, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
       <div>
-        <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", color: C.textPrimary }}>EDITA SHEQIRI<span style={{ color: C.cyan }}>.</span></div>
+        <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1rem", color: C.textPrimary }}>EDITA SHEQIRI (LATIFI)<span style={{ color: C.cyan }}>.</span></div>
         <a href={`mailto:${EMAIL}`} style={{ fontFamily: "'DM Mono',monospace", fontSize: ".68rem", color: C.textMuted, letterSpacing: ".04em", textDecoration: "none", transition: "color .2s" }}
           onMouseEnter={(e) => (e.currentTarget.style.color = C.cyan)}
           onMouseLeave={(e) => (e.currentTarget.style.color = C.textMuted)}
