@@ -194,7 +194,7 @@ const PROJECTS = [
 /* ─── ABOUT / LANGUAGES ─────────────────────────────────────────────────── */
 const ABOUT_PARAS = [
   "I'm Edita. An independent full stack engineer and IT consultant based in Podujevë, Kosovo, working with B2B clients across Kosovo, Austria, Malta, Africa, Switzerland, and Prague (Czechia).",
-  "I write code every day, and I'm close to the rest of the team through dailies, sprint planning, code reviews and workshops. I work with designers, product owners, QA and DevOps, help test tickets before they're merged, and keep an eye on hotfixes through releases. Most of it is remote, and I'm open to relocating if a company needs me on-site.",
+  "I write code every day, and I work closely with each client's team through dailies, sprint planning, code reviews and workshops. I collaborate with designers, product owners, QA and DevOps, help test tickets before they're merged, and keep an eye on hotfixes through releases, while running my own independent practice. Most of it is remote, and I'm open to relocating if a client needs me on-site.",
   "I work hard, and I do it honestly. I take a project from the first line of code to the day it goes live, and I own it the whole way. I care where I put that work, so I'm picky about the teams I say yes to.",
 ];
 
