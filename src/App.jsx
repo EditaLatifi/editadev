@@ -246,7 +246,7 @@ const PROCESS = [
   { n: "04", title: "Deliver", desc: "It goes live, it's documented, and your team can own it without me in the room." },
 ];
 
-const COURSES = ["Arra Academy", "Probit Academy", "University of the People"];
+const COURSES = ["Arra Academy", "Probit Academy"];
 
 /* ─── CURRENTLY BUILDING — Edita updates this list + the date ───────────── */
 const NOW_UPDATED = "June 2026";
